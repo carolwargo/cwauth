@@ -7,7 +7,7 @@ import AdminLayout from "./Layout/AdminLayout";
 import IndexPage from "./pages/IndexPage";
 import LoginPage from "./pages/LoginPage";
 import RegisterPage from "./pages/RegisterPage";
-import ErrorBoundary from "./components/ErrorBoundary";
+import ErrorBoundary from '../components/ErrorBoundary';
 
 import "./App.css";
 
@@ -23,8 +23,13 @@ function App() {
           </Route>
           <Route path="/login" element={<LoginPage />} />
           <Route path="/register" element={<RegisterPage />} />
+          <Route index element={<IndexPage />} />
+          <Route path="/login" element={<LoginPage />} />
+          <Route path="/register" element={<RegisterPage />} />
+            {/* Fallback route to catch all unmatched paths */}
+            <Route path="*" element={<NotFound />} />
       </Routes>
-      </UserContextProvider>
+    </UserContextProvider>
     </ErrorBoundary>
   </BrowserRouter>
     </div>
@@ -38,3 +43,4 @@ function NotFound() {
 }
 
 export default App;
+
