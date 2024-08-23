@@ -1,4 +1,4 @@
-require('../dotenv').config();
+require('dotenv').config(); // Ensure correct path and usage
 const mongoose = require('mongoose');
 
 const connectDB = async () => {
