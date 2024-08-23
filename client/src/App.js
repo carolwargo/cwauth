@@ -6,7 +6,8 @@ import AdminLayout from "./Layout/AdminLayout";
 import IndexPage from "./pages/IndexPage";
 import LoginPage from "./pages/LoginPage";
 import RegisterPage from "./pages/RegisterPage";
-import ErrorBoundary from '../components/ErrorBoundary';
+import ErrorBoundary from './ErrorBoundary';
+import HomePage from "./pages/HomePage";
 
 import "./App.css";
 
@@ -17,9 +18,8 @@ function App() {
     <ErrorBoundary>
     <UserContextProvider>
     <Routes>
-        <Route path="/" element={<AdminLayout />}>
-          <Route index element={<IndexPage />} />
-          </Route>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/admin-layout" element={<AdminLayout />} />
           <Route path="/login" element={<LoginPage />} />
           <Route path="/register" element={<RegisterPage />} />
           <Route index element={<IndexPage />} />
