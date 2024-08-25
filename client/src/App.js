@@ -3,13 +3,14 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import {UserContextProvider} from "./UserContext";
 import AdminLayout from "./Layout/AdminLayout";
 
-import IndexPage from "./pages/IndexPage";
+import AdminPage from "./pages/AdminPage";
 import LoginPage from "./pages/LoginPage";
 import RegisterPage from "./pages/RegisterPage";
 import ErrorBoundary from './ErrorBoundary';
 import HomePage from "./pages/HomePage";
+import ContactPage from "./pages/ContactPage";
 
-import "./App.css";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (
@@ -22,9 +23,10 @@ function App() {
           <Route path="/admin-layout" element={<AdminLayout />} />
           <Route path="/login" element={<LoginPage />} />
           <Route path="/register" element={<RegisterPage />} />
-          <Route index element={<IndexPage />} />
+          <Route index element={<AdminPage />} />
           <Route path="/login" element={<LoginPage />} />
           <Route path="/register" element={<RegisterPage />} />
+          <Route path="/contact" element={<ContactPage />} />
             {/* Fallback route to catch all unmatched paths */}
             <Route path="*" element={<NotFound />} />
       </Routes>
