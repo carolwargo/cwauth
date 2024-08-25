@@ -10,6 +10,8 @@ import ErrorBoundary from './ErrorBoundary';
 import HomePage from "./pages/HomePage";
 import ContactPage from "./pages/ContactPage";
 
+import MultiDropNav from "./components/Navgation/MultiDropNav.jsx";  
+
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
@@ -17,6 +19,7 @@ function App() {
     <div>
       <BrowserRouter>
     <ErrorBoundary>
+    <MultiDropNav />
     <UserContextProvider>
     <Routes>
           <Route path="/" element={<HomePage />} />
