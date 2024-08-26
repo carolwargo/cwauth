@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import UsersContainer from "../components/admin/UsersContainer";
 import EmailDashboard from "../components/admin/EmailComponent";
-import { IoLockClosed } from "react-icons/io5";
+//import { IoLockClosed } from "react-icons/io5";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Sidebar, Menu, MenuItem, SubMenu } from "react-pro-sidebar";
 //import { set } from "mongoose";
@@ -26,15 +26,7 @@ const AdminPage = () => {
             }}
           >
             Admin Dashboard
-            <span>
-                <IoLockClosed className="mb-2 rounded-circle p-2" 
-                style={{
-                    fontSize:'2.5rem',
-                    backgroundColor: "white",
-                    color: "black",
-
-                }}/>
-                </span>
+       
           </h1>
 
           <p>Welcome to the Admin Dashboard</p>
