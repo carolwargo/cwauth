@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
-import { Navbar, Nav, Container, NavDropdown } from 'react-bootstrap';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import { Navbar, Nav, Container, NavDropdown,  } from 'react-bootstrap';
+import { CgOverflow } from "react-icons/cg";
 
+import 'bootstrap/dist/css/bootstrap.min.css';
+import "@fontsource/dancing-script"; //
 
 const CustomNavbar = () => {
-  // State for controlling navbar toggle
-  const [expanded, setExpanded] = useState(false);
 
   // State for controlling dropdown open/close
   const [dropdownOpen, setDropdownOpen] = useState(null);
@@ -15,25 +15,16 @@ const CustomNavbar = () => {
   };
 
   return (
-    <Navbar 
-      bg="light" 
-      expand="lg" 
-      fixed="top" 
-      expanded={expanded} 
-      onToggle={() => setExpanded(!expanded)}
-    >
+    <Navbar expand="lg" className="bg-body-tertiary">
       <Container>
-        <Navbar.Brand href="/">
-          <img
-            src="https://fullcircledigital.ca/wp-content/uploads/2021/02/logo-black.png"
-            height="40"
-            className="d-inline-block align-top"
-            alt="Full Circle Digital"
-          />
+        <Navbar.Brand  href="/">
+       <span style={{fontFamily:'Dancing Script'}}> 
+     <CgOverflow  style={{fontSize:'2rem'}} className='shadow rounded'/> 
+       </span>
         </Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+      <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="ms-auto">
+        <Nav className="ms-auto">
             <NavDropdown
               title="Services"
               id="services-dropdown"
@@ -41,13 +32,13 @@ const CustomNavbar = () => {
               onMouseEnter={() => handleDropdownToggle('services')}
               onMouseLeave={() => handleDropdownToggle(null)}
             >
-              <NavDropdown.Item href="/services/web-development" onClick={() => setExpanded(false)}>
+              <NavDropdown.Item href="/services/web-development">
                 Web Development
               </NavDropdown.Item>
-              <NavDropdown.Item href="/services/seo" onClick={() => setExpanded(false)}>
+              <NavDropdown.Item href="/services/seo">
                 SEO
               </NavDropdown.Item>
-              <NavDropdown.Item href="/services/content-creation" onClick={() => setExpanded(false)}>
+              <NavDropdown.Item href="/services/content-creation">
                 Content Creation
               </NavDropdown.Item>
             </NavDropdown>
@@ -59,13 +50,13 @@ const CustomNavbar = () => {
               onMouseEnter={() => handleDropdownToggle('portfolio')}
               onMouseLeave={() => handleDropdownToggle(null)}
             >
-              <NavDropdown.Item href="/portfolio/websites" onClick={() => setExpanded(false)}>
+              <NavDropdown.Item href="/portfolio/websites">
                 Websites
               </NavDropdown.Item>
-              <NavDropdown.Item href="/portfolio/branding" onClick={() => setExpanded(false)}>
+              <NavDropdown.Item href="/portfolio/branding">
                 Branding
               </NavDropdown.Item>
-              <NavDropdown.Item href="/portfolio/case-studies" onClick={() => setExpanded(false)}>
+              <NavDropdown.Item href="/portfolio/case-studies">
                 Case Studies
               </NavDropdown.Item>
             </NavDropdown>
@@ -77,13 +68,13 @@ const CustomNavbar = () => {
               onMouseEnter={() => handleDropdownToggle('blog')}
               onMouseLeave={() => handleDropdownToggle(null)}
             >
-              <NavDropdown.Item href="/blog/web-design" onClick={() => setExpanded(false)}>
+              <NavDropdown.Item href="/blog/web-design">
                 Web Design
               </NavDropdown.Item>
-              <NavDropdown.Item href="/blog/seo-tips" onClick={() => setExpanded(false)}>
+              <NavDropdown.Item href="/blog/seo-tips">
                 SEO Tips
               </NavDropdown.Item>
-              <NavDropdown.Item href="/blog/digital-marketing" onClick={() => setExpanded(false)}>
+              <NavDropdown.Item href="/blog/digital-marketing">
                 Digital Marketing
               </NavDropdown.Item>
             </NavDropdown>
@@ -95,18 +86,18 @@ const CustomNavbar = () => {
               onMouseEnter={() => handleDropdownToggle('about')}
               onMouseLeave={() => handleDropdownToggle(null)}
             >
-              <NavDropdown.Item href="/about/our-story" onClick={() => setExpanded(false)}>
+              <NavDropdown.Item href="/about/our-story">
                 Our Story
               </NavDropdown.Item>
-              <NavDropdown.Item href="/about/team" onClick={() => setExpanded(false)}>
+              <NavDropdown.Item href="/about/team">
                 Team
               </NavDropdown.Item>
-              <NavDropdown.Item href="/about/careers" onClick={() => setExpanded(false)}>
+              <NavDropdown.Item href="/about/careers">
                 Careers
               </NavDropdown.Item>
             </NavDropdown>
 
-            <Nav.Link href="/contact" onClick={() => setExpanded(false)}>Contact</Nav.Link>
+            <Nav.Link href="/contact">Contact</Nav.Link>
 
             <NavDropdown
               title="More"
@@ -115,10 +106,10 @@ const CustomNavbar = () => {
               onMouseEnter={() => handleDropdownToggle('more')}
               onMouseLeave={() => handleDropdownToggle(null)}
             >
-              <NavDropdown.Item href="/privacy-policy" onClick={() => setExpanded(false)}>
+              <NavDropdown.Item href="/privacy-policy">
                 Privacy Policy
               </NavDropdown.Item>
-              <NavDropdown.Item href="/terms-conditions" onClick={() => setExpanded(false)}>
+              <NavDropdown.Item href="/terms-conditions">
                 Terms & Conditions
               </NavDropdown.Item>
             </NavDropdown>

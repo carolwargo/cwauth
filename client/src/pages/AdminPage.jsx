@@ -42,10 +42,10 @@ const AdminPage = () => {
       </div>
 <div className="row d-flex justify-content-center align-items-start px-4 mt-3 mb-3">
 <nav aria-label="breadcrumb">
-  <ol class="breadcrumb">
-    <li class="breadcrumb-item"><Link href="/">Home</Link></li>
-    <li class="breadcrumb-item"><Link href="/">Library</Link></li>
-    <li class="breadcrumb-item active" aria-current="page">Data</li>
+  <ol className="breadcrumb">
+    <li className="breadcrumb-item"><Link href="/">Home</Link></li>
+    <li className="breadcrumb-item"><Link href="/">Library</Link></li>
+    <li className="breadcrumb-item active" aria-current="page">Data</li>
   </ol>
 </nav>
 </div>
