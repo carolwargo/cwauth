@@ -1,17 +1,24 @@
 import React, { useState } from 'react';
 import { Navbar, Nav, Container, NavDropdown,  } from 'react-bootstrap';
 import { CgOverflow } from "react-icons/cg";
-
+import { RxCaretRight } from "react-icons/rx";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "@fontsource/dancing-script"; //
 
-const CustomNavbar = () => {
+import { useMediaQuery } from 'react-responsive';
 
-  // State for controlling dropdown open/close
+const CustomNavbar = () => {
   const [dropdownOpen, setDropdownOpen] = useState(null);
+  const isSmallScreen = useMediaQuery({ maxWidth: 991.98 }); // Adjust breakpoint as needed
 
   const handleDropdownToggle = (dropdown) => {
     setDropdownOpen(dropdownOpen === dropdown ? null : dropdown);
+  };
+
+  const handleDropdownClick = (dropdown) => {
+    if (isSmallScreen) {
+      setDropdownOpen(dropdownOpen === dropdown ? null : dropdown);
+    }
   };
 
   return (
@@ -29,17 +36,21 @@ const CustomNavbar = () => {
               title="Services"
               id="services-dropdown"
               show={dropdownOpen === 'services'}
+              onClick={() => handleDropdownClick('services')}
               onMouseEnter={() => handleDropdownToggle('services')}
               onMouseLeave={() => handleDropdownToggle(null)}
+            
             >
+        
+          
               <NavDropdown.Item href="/services/web-development">
-                Web Development
+              <RxCaretRight/> Web Development
               </NavDropdown.Item>
               <NavDropdown.Item href="/services/seo">
-                SEO
+              <RxCaretRight/> SEO
               </NavDropdown.Item>
               <NavDropdown.Item href="/services/content-creation">
-                Content Creation
+              <RxCaretRight/> Content Creation
               </NavDropdown.Item>
             </NavDropdown>
 
@@ -47,17 +58,18 @@ const CustomNavbar = () => {
               title="Portfolio"
               id="portfolio-dropdown"
               show={dropdownOpen === 'portfolio'}
+              onClick={() => handleDropdownClick('portfolio')}
               onMouseEnter={() => handleDropdownToggle('portfolio')}
               onMouseLeave={() => handleDropdownToggle(null)}
             >
               <NavDropdown.Item href="/portfolio/websites">
-                Websites
+              <RxCaretRight/>  Websites
               </NavDropdown.Item>
               <NavDropdown.Item href="/portfolio/branding">
-                Branding
+              <RxCaretRight/> Branding
               </NavDropdown.Item>
               <NavDropdown.Item href="/portfolio/case-studies">
-                Case Studies
+              <RxCaretRight/> Case Studies
               </NavDropdown.Item>
             </NavDropdown>
 
@@ -65,17 +77,18 @@ const CustomNavbar = () => {
               title="Blog"
               id="blog-dropdown"
               show={dropdownOpen === 'blog'}
+              onClick={() => handleDropdownClick('blog')}
               onMouseEnter={() => handleDropdownToggle('blog')}
               onMouseLeave={() => handleDropdownToggle(null)}
             >
               <NavDropdown.Item href="/blog/web-design">
-                Web Design
+              <RxCaretRight/>  Web Design
               </NavDropdown.Item>
               <NavDropdown.Item href="/blog/seo-tips">
-                SEO Tips
+              <RxCaretRight/>  SEO Tips
               </NavDropdown.Item>
               <NavDropdown.Item href="/blog/digital-marketing">
-                Digital Marketing
+              <RxCaretRight/>  Digital Marketing
               </NavDropdown.Item>
             </NavDropdown>
 
@@ -83,17 +96,18 @@ const CustomNavbar = () => {
               title="About"
               id="about-dropdown"
               show={dropdownOpen === 'about'}
+              onClick={() => handleDropdownClick('about')}
               onMouseEnter={() => handleDropdownToggle('about')}
               onMouseLeave={() => handleDropdownToggle(null)}
             >
               <NavDropdown.Item href="/about/our-story">
-                Our Story
+              <RxCaretRight/> Our Story
               </NavDropdown.Item>
               <NavDropdown.Item href="/about/team">
-                Team
+              <RxCaretRight/> Team
               </NavDropdown.Item>
               <NavDropdown.Item href="/about/careers">
-                Careers
+              <RxCaretRight/>  Careers
               </NavDropdown.Item>
             </NavDropdown>
 
@@ -103,14 +117,15 @@ const CustomNavbar = () => {
               title="More"
               id="more-dropdown"
               show={dropdownOpen === 'more'}
+              onClick={() => handleDropdownClick('more')}
               onMouseEnter={() => handleDropdownToggle('more')}
               onMouseLeave={() => handleDropdownToggle(null)}
             >
               <NavDropdown.Item href="/privacy-policy">
-                Privacy Policy
+              <RxCaretRight/>  Privacy Policy
               </NavDropdown.Item>
               <NavDropdown.Item href="/terms-conditions">
-                Terms & Conditions
+              <RxCaretRight/> Terms & Conditions
               </NavDropdown.Item>
             </NavDropdown>
           </Nav>

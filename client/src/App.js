@@ -2,6 +2,7 @@ import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import {UserContextProvider} from "./UserContext";
 import AdminLayout from "./Layout/AdminLayout";
+import BlackHeader from "./components/Header/BlackHeader";  
 
 import AdminPage from "./pages/AdminPage";
 import LoginPage from "./pages/LoginPage";
@@ -20,6 +21,7 @@ function App() {
       <BrowserRouter>
     <ErrorBoundary>
     <MultiDropNav />
+    <BlackHeader />
     <UserContextProvider>
     <Routes>
           <Route path="/" element={<HomePage />} />
