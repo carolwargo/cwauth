@@ -1,8 +1,12 @@
 import React, { useState } from "react";
 import { Navbar, Nav, Container, NavDropdown } from "react-bootstrap";
 import { CgOverflow } from "react-icons/cg";
-import { RxCaretRight } from "react-icons/rx";
-import { IoLockClosed } from "react-icons/io5";
+import { Link } from "react-router-dom";
+import { RiLoginCircleLine } from "react-icons/ri";
+import { IoPaperPlaneOutline } from "react-icons/io5";
+//import { RxCaretRight } from "react-icons/rx";
+//import { IoLockClosed } from "react-icons/io5";
+//import { PiUserCircleDuotone } from "react-icons/pi";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "@fontsource/dancing-script"; //
 
@@ -25,117 +29,137 @@ const CustomNavbar = () => {
   return (
     <Navbar  expand="lg" className="bg-body-tertiary">
       <Container fluid>
-        <Navbar.Brand href="/">
+        <Navbar.Brand href="/"> 
           <span style={{ fontFamily: "Dancing Script" }}>
             <CgOverflow
-              style={{ fontSize: "2rem" }}
+              style={{ fontSize: "2rem"}}
               className="shadow rounded"
             />
           </span>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
+        <Container>
+      <Nav className="mx-auto justify-content-center">
+        <NavDropdown
+          title="Services"
+          id="services-dropdown"
+          show={dropdownOpen === "services"}
+          onClick={() => handleDropdownClick("services")}
+          onMouseEnter={() => handleDropdownToggle("services")}
+          onMouseLeave={() => handleDropdownToggle(null)}
+        >
+          <NavDropdown.Item href="/services/web-development">
+            Web Development
+          </NavDropdown.Item>
+          <NavDropdown.Item href="/services/seo">
+            SEO
+          </NavDropdown.Item>
+          <NavDropdown.Item href="/services/content-creation">
+            Content Creation
+          </NavDropdown.Item>
+        </NavDropdown>
+
+        <NavDropdown
+          title="Portfolio"
+          id="portfolio-dropdown"
+          show={dropdownOpen === "portfolio"}
+          onClick={() => handleDropdownClick("portfolio")}
+          onMouseEnter={() => handleDropdownToggle("portfolio")}
+          onMouseLeave={() => handleDropdownToggle(null)}
+        >
+          <NavDropdown.Item href="/portfolio/websites">
+            Websites
+          </NavDropdown.Item>
+          <NavDropdown.Item href="/portfolio/branding">
+            Branding
+          </NavDropdown.Item>
+          <NavDropdown.Item href="/portfolio/case-studies">
+            Case Studies
+          </NavDropdown.Item>
+        </NavDropdown>
+
+        <NavDropdown
+          title="Blog"
+          id="blog-dropdown"
+          show={dropdownOpen === "blog"}
+          onClick={() => handleDropdownClick("blog")}
+          onMouseEnter={() => handleDropdownToggle("blog")}
+          onMouseLeave={() => handleDropdownToggle(null)}
+        >
+          <NavDropdown.Item href="/blog/web-design">
+            Web Design
+          </NavDropdown.Item>
+          <NavDropdown.Item href="/blog/seo-tips">
+            SEO Tips
+          </NavDropdown.Item>
+          <NavDropdown.Item href="/blog/digital-marketing">
+            Digital Marketing
+          </NavDropdown.Item>
+        </NavDropdown>
+
+        <NavDropdown
+          title="About"
+          id="about-dropdown"
+          show={dropdownOpen === "about"}
+          onClick={() => handleDropdownClick("about")}
+          onMouseEnter={() => handleDropdownToggle("about")}
+          onMouseLeave={() => handleDropdownToggle(null)}
+        >
+          <NavDropdown.Item href="/about/our-story">
+            Our Story
+          </NavDropdown.Item>
+          <NavDropdown.Item href="/about/team">
+            Team
+          </NavDropdown.Item>
+          <NavDropdown.Item href="/about/careers">
+            Careers
+          </NavDropdown.Item>
+        </NavDropdown>
+
+        <NavDropdown
+          title="More"
+          id="more-dropdown"
+          show={dropdownOpen === "more"}
+          onClick={() => handleDropdownClick("more")}
+          onMouseEnter={() => handleDropdownToggle("more")}
+          onMouseLeave={() => handleDropdownToggle(null)}
+        >
+          <NavDropdown.Item href="/privacy-policy">
+            Privacy Policy
+          </NavDropdown.Item>
+          <NavDropdown.Item href="/terms-conditions">
+            Terms & Conditions
+          </NavDropdown.Item>
+        </NavDropdown>
+
+        <NavDropdown
+          title="Get Started"
+          id="start-dropdown"
+          show={dropdownOpen === "start"}
+          onClick={() => handleDropdownClick("start")}
+          onMouseEnter={() => handleDropdownToggle("start")}
+          onMouseLeave={() => handleDropdownToggle(null)}
+        >
+          <Nav.Link href="/contact">Contact</Nav.Link>
+          <Nav.Link href="/calendly">Book Discovery Call</Nav.Link>
+        </NavDropdown>
+      </Nav>
+    </Container>
           <Nav className="ms-auto">
-            <NavDropdown
-              title="Services"
-              id="services-dropdown"
-              show={dropdownOpen === "services"}
-              onClick={() => handleDropdownClick("services")}
-              onMouseEnter={() => handleDropdownToggle("services")}
-              onMouseLeave={() => handleDropdownToggle(null)}
-            >
-              <NavDropdown.Item href="/services/web-development">
-                <RxCaretRight /> Web Development
-              </NavDropdown.Item>
-              <NavDropdown.Item href="/services/seo">
-                <RxCaretRight /> SEO
-              </NavDropdown.Item>
-              <NavDropdown.Item href="/services/content-creation">
-                <RxCaretRight /> Content Creation
-              </NavDropdown.Item>
-            </NavDropdown>
-
-            <NavDropdown
-              title="Portfolio"
-              id="portfolio-dropdown"
-              show={dropdownOpen === "portfolio"}
-              onClick={() => handleDropdownClick("portfolio")}
-              onMouseEnter={() => handleDropdownToggle("portfolio")}
-              onMouseLeave={() => handleDropdownToggle(null)}
-            >
-              <NavDropdown.Item href="/portfolio/websites">
-                <RxCaretRight /> Websites
-              </NavDropdown.Item>
-              <NavDropdown.Item href="/portfolio/branding">
-                <RxCaretRight /> Branding
-              </NavDropdown.Item>
-              <NavDropdown.Item href="/portfolio/case-studies">
-                <RxCaretRight /> Case Studies
-              </NavDropdown.Item>
-            </NavDropdown>
-
-            <NavDropdown
-              title="Blog"
-              id="blog-dropdown"
-              show={dropdownOpen === "blog"}
-              onClick={() => handleDropdownClick("blog")}
-              onMouseEnter={() => handleDropdownToggle("blog")}
-              onMouseLeave={() => handleDropdownToggle(null)}
-            >
-              <NavDropdown.Item href="/blog/web-design">
-                <RxCaretRight /> Web Design
-              </NavDropdown.Item>
-              <NavDropdown.Item href="/blog/seo-tips">
-                <RxCaretRight /> SEO Tips
-              </NavDropdown.Item>
-              <NavDropdown.Item href="/blog/digital-marketing">
-                <RxCaretRight /> Digital Marketing
-              </NavDropdown.Item>
-            </NavDropdown>
-
-            <NavDropdown
-              title="About"
-              id="about-dropdown"
-              show={dropdownOpen === "about"}
-              onClick={() => handleDropdownClick("about")}
-              onMouseEnter={() => handleDropdownToggle("about")}
-              onMouseLeave={() => handleDropdownToggle(null)}
-            >
-              <NavDropdown.Item href="/about/our-story">
-                <RxCaretRight /> Our Story
-              </NavDropdown.Item>
-              <NavDropdown.Item href="/about/team">
-                <RxCaretRight /> Team
-              </NavDropdown.Item>
-              <NavDropdown.Item href="/about/careers">
-                <RxCaretRight /> Careers
-              </NavDropdown.Item>
-            </NavDropdown>
-
-
-            <NavDropdown
-              title="More"
-              id="more-dropdown"
-              show={dropdownOpen === "more"}
-              onClick={() => handleDropdownClick("more")}
-              onMouseEnter={() => handleDropdownToggle("more")}
-              onMouseLeave={() => handleDropdownToggle(null)}
-            >
-              <NavDropdown.Item href="/privacy-policy">
-                <RxCaretRight /> Privacy Policy
-              </NavDropdown.Item>
-              <NavDropdown.Item href="/terms-conditions">
-                <RxCaretRight /> Terms & Conditions
-              </NavDropdown.Item>
-            </NavDropdown>
-
-            
-            <Nav.Link href="/contact">Contact</Nav.Link>
-            <Nav.Link href="/login">
-            <IoLockClosed className="mb-2"
-                style={{color: "black"}}/>
-            </Nav.Link>
+  
+<Nav.Link as={Link} to="/contact" className="px-0 mx-1">
+<IoPaperPlaneOutline
+        className="w3-hover-green w3-text-blue w3-pale-blue border border-1 rounded rounded-circle p-1 shadow"
+        style={{ fontSize: '1.75rem'}} />
+</Nav.Link>
+            <Nav.Link as={Link} to="/login" className="mx-0 px-1">
+    <RiLoginCircleLine
+        className="w3-hover-blue w3-text-green border w3-pale-green border-1 rounded rounded-circle p-1 shadow"
+        style={{ fontSize: '1.75rem'}} />
+</Nav.Link>
           </Nav>
+          
         </Navbar.Collapse>
       </Container>
     </Navbar>

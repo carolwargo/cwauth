@@ -1,8 +1,8 @@
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { UserContextProvider } from "./UserContext";
-import BlackHeader from "./components/Header/BlackHeader";
 
+import Calendly from './pages/Calendly.jsx';
 import AdminPage from "./pages/AdminPage";
 import LoginPage from "./pages/LoginPage";
 import RegisterPage from "./pages/RegisterPage";
@@ -11,7 +11,8 @@ import HomePage from "./pages/HomePage";
 import ContactPage from "./pages/ContactPage";
 import AdminLayout from "./components/Layout/AdminLayout.jsx";
 import MultiDropNav from "./components/Navgation/MultiDropNav.jsx";
-
+import HomeLayout from "./components/Layout/MainLayout.jsx";
+import Footer from "./components/Footer.jsx";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
@@ -20,11 +21,14 @@ function App() {
       <BrowserRouter>
         <ErrorBoundary>
           <MultiDropNav />
-          <BlackHeader />
           <UserContextProvider>
             <Routes>
-              <Route path="/" element={<HomePage />} />
-              <Route path="/admin-layout" element={<AdminLayout />}>
+            <Route element={<HomeLayout />} >
+            <Route path="/" element={<HomePage />} />
+         
+          </Route>
+          <Route path="/calendly" element={<Calendly />} />
+              <Route path="/admin" element={<AdminLayout />}>
                 <Route index element={<AdminPage />} />
               </Route>
               <Route path="/register" element={<RegisterPage />} />
@@ -35,6 +39,7 @@ function App() {
               <Route path="*" element={<NotFound />} />
             </Routes>
           </UserContextProvider>
+          <Footer/>
         </ErrorBoundary>
       </BrowserRouter>
     </div>

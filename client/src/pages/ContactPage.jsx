@@ -1,7 +1,6 @@
 import React, { useRef } from 'react';
 import emailjs from '@emailjs/browser';
-import Calendly from '../components/admin/Calendly';
-
+import MultiForm from '../components/contact/MultiPage';
 const Contact = () => {
   const form = useRef();
 
@@ -27,6 +26,12 @@ const Contact = () => {
 
   return (
     <div className='w3-light-gray'>
+
+<div className="container">
+  <MultiForm />
+</div>
+
+
 <div className="container w3-padding-48">
   <div className="row justify-content-center">
     <div className="col-md-8 col-lg-6">
@@ -84,8 +89,6 @@ const Contact = () => {
     </div>
   </div>
 </div>
-
-<Calendly/>
 </div>
 
   );
