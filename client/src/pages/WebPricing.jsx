@@ -4,7 +4,6 @@ import { useInView } from "react-intersection-observer";
 import "../styles/pricing.css";
 import CityBG from "../assets/images/CityBG.png";
 import ButtonBG from "../assets/images/ButtonBG.png";
-import { GiDropletSplash } from "react-icons/gi";
 import { FaRegUserCircle } from "react-icons/fa";
 import { RiRestartLine } from "react-icons/ri";
 import { BsSend } from "react-icons/bs";
@@ -33,6 +32,7 @@ const WebPricing = () => {
         backgroundAttachment: "fixed",
         height: "125vh",
         zIndex: "-1",
+        
       }}
     >
       <svg xmlns="http://www.w3.org/2000/svg" className="d-none">
@@ -66,52 +66,39 @@ const WebPricing = () => {
         transition={{ duration: 0.8 }}
       >
         <header>
-          
-          <div className="w3-white w3-padding-8 w3-padding-large d-flex flex-column justify-content-center align-items-center flex-md-row align-items-center border-bottom">
-            <a
-              href="/"
-              className="d-flex align-items-center link-body-emphasis text-decoration-none"
-            >
-              <span className="fs-4">
-                <GiDropletSplash style={{color:'pink'}}/> <span style={{fontSize:'15px'}}>cloudStream</span>
-              </span>
-            </a>
-
-            <nav className="d-inline-flex mt-2 mt-md-0 ms-md-auto justify-content-center"
+          <div className="container-fluid text-end">
+        <nav className="d-inline-flex fw-bold mt-2 mt-md-0 ms-md-auto justify-content-center"
             style={{fontSize:'15px'}}>
-              <a
-                className="me-3 py-2 link-body-emphasis text-decoration-none"
-                href="/"
-              >
-                Features
-              </a>
-              <a
-                className="me-3 py-2 link-body-emphasis text-decoration-none"
-                href="/"
-              >
-                Enterprise
-              </a>
-              <a
-                className="me-3 py-2 link-body-emphasis text-decoration-none"
-                href="/"
-              >
-                Support
-              </a>
-              <a
-                className="py-2 link-body-emphasis text-decoration-none"
+               <a
+                className="me-3 py-2 link-body-emphasis text-decoration-underline"
                 href="/"
               >
                 Pricing
               </a>
+              <a
+                className="me-3 py-2 link-body-emphasis text-decoration-underline"
+                href="/"
+              >
+                Features
+              </a>
+            
+              <a
+                className="me-3 py-2 link-body-emphasis text-decoration-underline"
+                href="/"
+              >
+                Support
+              </a>
+            
             </nav>
-          </div>
-          <br />
+            </div>
           <div className="container">
             <div className="pricing-header mb-4 pb-md-4 mx-auto text-center">
               <h1 className="display-4 fw-normal text-body-emphasis">
                 Plans & Pricing
-              </h1>
-              <p className="fs-5 text-body-secondary">
+                </h1>
+                <b>
+                <hr/></b>
+              <p className="fs-5 text-body-black">
                 Whether you're an individual developer, a growing startup, or a
                 large corporation, our flexible pricing plans ensure you get the
                 best value and performance. Explore our Free, Pro, and
@@ -456,7 +443,7 @@ const WebPricing = () => {
       </motion.div>
       <br />
 
-      {/**Start Footer */}
+      {/**Start Footer 
       <div style={{ backgroundColor: "#f9d5d7" }}>
         <footer className="container w3-padding-32 w3-margin-top w3-margin-bottom text-black">
           <div className="row justify-content-center">
@@ -550,6 +537,7 @@ const WebPricing = () => {
           </div>
         </footer>
       </div>
+      */}
     </div>
   );
 };
