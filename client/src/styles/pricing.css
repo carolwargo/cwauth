@@ -1,0 +1,10 @@
+.container {
+    max-width: 960px;
+  }
+  
+
+.table-transparent {
+    background-color: var(--table-bg) !important;
+    border: var(--table-border);
+}
+
