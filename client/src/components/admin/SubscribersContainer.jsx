@@ -1,53 +1,46 @@
 import React, { useEffect, useState } from 'react';
 
 function SubscribersContainer() {
-  const [subscribers, setSubscribers] = useState([]);
+  const [subscriptions, setSubscriptions] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    // Fetch subscribers from the backend
-    const fetchSubscribers = async () => {
+    // Fetch subscriptions from the backend
+    const fetchSubscriptions = async () => {
       try {
-        const response = await fetch('http://localhost:4000/api/subscribers');
+        const response = await fetch('http://localhost:4000/api/subscription'); // Ensure this URL matches your route
         if (!response.ok) {
-          throw new Error('Failed to fetch subscribers');
+          throw new Error('Failed to fetch subscriptions');
         }
         const data = await response.json();
-        setSubscribers(data);
+        setSubscriptions(data);
       } catch (error) {
         setError(error.message);
       } finally {
         setLoading(false);
       }
     };
-
-    fetchSubscribers();
+  
+    fetchSubscriptions();
   }, []);
-
-  if (loading) {
-    return <p>Loading subscribers...</p>;
-  }
-
-  if (error) {
-    return <p>Error: {error}</p>;
-  }
-
+  
   return (
-    <div className='user-dashboard-container'>
-      <h2>Subscribers List</h2>
-      <table className='table table-striped table-bordered'>
+    <div className='subscriber-dashboard-container'>
+      <h2>Subscription List</h2>
+      <table className='table table-striped table-bordered'
+        style={{fontSize:'14px'}}>
         <thead>
           <tr>
-            <th style={{ fontSize: '14px' }}>EMAIL</th>
-            <th style={{ fontSize: '14px' }}>DATE</th>
+            <th>Email</th>
+            <th>Date</th>
           </tr>
         </thead>
-        <tbody className='mt-3'>
-          {subscribers.map(subscriber => (
-            <tr key={subscriber._id}>
-              <td>{subscriber.email}</td>
-              <td>{new Date(subscriber.date).toLocaleDateString()}</td>
+        <tbody>
+          {subscriptions.map(sub => (
+            <tr key={sub._id}>
+              <td>{sub.email}</td>
+              <td>{new Date(sub.date).toLocaleDateString()}</td>
             </tr>
           ))}
         </tbody>
@@ -57,3 +50,4 @@ function SubscribersContainer() {
 }
 
 export default SubscribersContainer;
+

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import UsersContainer from "../components/admin/UsersContainer";
 import EmailDashboard from "../components/admin/EmailComponent";
 import SubscribersContainer from "../components/admin/SubscribersContainer";
@@ -6,9 +6,37 @@ import SignUpsContainer from "../components/admin/SignUpsContainer";
 import ContactsContainer from "../components/admin/ContactsContainer";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Sidebar, Menu, MenuItem, SubMenu } from "react-pro-sidebar";
+import axios from 'axios'; // For making API requests
 
 const AdminPage = () => {
   const [activeComponent, setActiveComponent] = useState("users");
+  const [notifications, setNotifications] = useState({
+    subscribers: 0,
+    signups: 0,
+    contacts: 0
+  });
+
+  useEffect(() => {
+    const fetchNotifications = async () => {
+      try {
+        const [subscribersRes, signupsRes, contactsRes] = await Promise.all([
+          axios.get('/api/subscription/count'),
+          axios.get('/api/signups/count'),
+          axios.get('/api/contact/count')
+        ]);
+
+        setNotifications({
+          subscribers: subscribersRes.data.count,
+          signups: signupsRes.data.count,
+          contacts: contactsRes.data.count
+        });
+      } catch (error) {
+        console.error("Error fetching notifications:", error);
+      }
+    };
+
+    fetchNotifications();
+  }, [activeComponent]); // Re-fetch notifications when component changes
 
   const handleRenderComponent = (component) => {
     setActiveComponent(component);
@@ -47,36 +75,32 @@ const AdminPage = () => {
                 },
               }}
             >
-      
-          
               <SubMenu label="Users">
+              <MenuItem
+                  onClick={() => handleRenderComponent("users")}
+                >
+                  All Users {notifications.users > 0 && `(${notifications.users})`}
+                </MenuItem>
                 <MenuItem
                   onClick={() => handleRenderComponent("subscribers")}
                 >
-                  Subscribers
+                  Subscribers {notifications.subscribers > 0 && `(${notifications.subscribers})`}
                 </MenuItem>
-                <MenuItem
-                  onClick={() => handleRenderComponent("signups")}
-                >
-                  SignUps
-                </MenuItem>
+            
                 <MenuItem
                   onClick={() => handleRenderComponent("contacts")}
                 >
-                  Contacts
+                  Contacts {notifications.contacts > 0 && `(${notifications.contacts})`}
                 </MenuItem>
               </SubMenu>
-            
             </Menu>
           </Sidebar>
         </div>
 
         <div className="col-sm-12 col-md-9 col-lg-9">
-          <div className="card" style={{ padding: "20px" }}>
+          <div className="card" style={{ padding: "20px", fontSize:'12px' }}>
             {activeComponent === "users" && <UsersContainer />}
-            {activeComponent === "email" && <EmailDashboard />}
             {activeComponent === "subscribers" && <SubscribersContainer />}
-            {activeComponent === "signups" && <SignUpsContainer />}
             {activeComponent === "contacts" && <ContactsContainer />}
           </div>
         </div>
@@ -86,13 +110,3 @@ const AdminPage = () => {
 };
 
 export default AdminPage;
-
-
-/**  <MenuItem
-                onClick={() => handleRenderComponent("email")}
-              >
-                Email
-              </MenuItem> 
-                 /** */
-               
-                /** */

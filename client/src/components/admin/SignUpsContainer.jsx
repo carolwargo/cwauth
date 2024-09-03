@@ -39,13 +39,13 @@ function UserContainer() {
       <table className='table table-striped  table-bordered'>
         <thead>
           <tr>
-            <th style={{fontSize:'14px'}}>USERNAME</th>
-            <th style={{fontSize:'14px'}}>ADMIN</th>
-            <th style={{fontSize:'14px'}}>FIRST</th>
-            <th style={{fontSize:'14px'}}>LAST</th>
-            <th style={{fontSize:'14px'}}>PHONE</th>
-            <th style={{fontSize:'14px'}}>EMAIL</th>
-            <th style={{fontSize:'14px'}}>SUBSCRIBED</th>
+            <th style={{ width: '15%',fontSize:'12px'}}>USERNAME</th>
+            <th style={{fontSize:'12px'}}>FIRST</th>
+            <th style={{fontSize:'12px'}}>LAST</th>
+            <th style={{fontSize:'12px'}}>PHONE</th>
+            <th style={{fontSize:'12px'}}>EMAIL</th>
+            <th style={{fontSize:'12px'}}>SUBSCRIBED</th>
+            <th style={{fontSize:'12px'}}>ADMIN</th>
           </tr>
         </thead>
         <tbody className='mt-3'>

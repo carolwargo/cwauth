@@ -6,10 +6,9 @@ function ContactsContainer() {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    // Fetch contacts from the backend
     const fetchContacts = async () => {
       try {
-        const response = await fetch('http://localhost:4000/api/contacts');
+        const response = await fetch('http://localhost:4000/api/contact');
         if (!response.ok) {
           throw new Error('Failed to fetch contacts');
         }
@@ -34,18 +33,18 @@ function ContactsContainer() {
   }
 
   return (
-    <div className='user-dashboard-container'>
-      <h2>Contacts List</h2>
+    <div className='contact-dashboard-container'>
+      <h2>Contact List</h2>
       <table className='table table-striped table-bordered'>
         <thead>
           <tr>
-            <th style={{ fontSize: '14px' }}>NAME</th>
-            <th style={{ fontSize: '14px' }}>EMAIL</th>
-            <th style={{ fontSize: '14px' }}>MESSAGE</th>
-            <th style={{ fontSize: '14px' }}>DATE</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Message</th>
+            <th>Date</th>
           </tr>
         </thead>
-        <tbody className='mt-3'>
+        <tbody>
           {contacts.map(contact => (
             <tr key={contact._id}>
               <td>{contact.name}</td>

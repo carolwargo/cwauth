@@ -13,12 +13,20 @@ router.post('/subscribe', async (req, res) => {
       return res.status(400).json({ error: 'Email is required' });
     }
 
+    // Check if the subscription already exists
+    const existingSubscription = await Subscription.findOne({ email });
+    if (existingSubscription) {
+      return res.status(400).json({ error: 'Subscription already exists' });
+    }
+
     // Create or find the user
     let user = await User.findOne({ email });
     if (!user) {
       user = new User({
         email,
-        userType: 'subscriber',
+        username: email, // Ensure this is a unique field
+        password: 'defaultPassword', // Set a placeholder password or handle it as required
+        isAdmin: false,
       });
       await user.save();
     }
@@ -29,8 +37,19 @@ router.post('/subscribe', async (req, res) => {
 
     res.status(201).json({ message: 'Subscription successful!' });
   } catch (error) {
-    console.error(error);
+    console.error('Failed to subscribe:', error);
     res.status(500).json({ error: 'Failed to subscribe' });
+  }
+});
+
+// Route to get all subscriptions
+router.get('/', async (req, res) => {
+  try {
+    const subscriptions = await Subscription.find().populate('user', 'email'); // Optional: populate user field with email
+    res.json(subscriptions);
+  } catch (error) {
+    console.error('Error fetching subscriptions:', error);
+    res.status(500).json({ error: 'Internal Server Error' });
   }
 });
 

@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
-const Contact = require('../models/Contact');
 const User = require('../models/User');
+const Contact = require('../models/Contact');
 
 // Route to handle contact form submission
 router.post('/contact', async (req, res) => {
@@ -19,7 +19,9 @@ router.post('/contact', async (req, res) => {
       user = new User({
         firstname: name, // Assuming name is the first name
         email,
-        userType: 'contact',
+        username: email, // Ensure you have a unique username, perhaps derived from the email
+        password: 'defaultPassword', // Set a default password or a placeholder if necessary
+        isAdmin: false,
       });
       await user.save();
     }
@@ -30,8 +32,18 @@ router.post('/contact', async (req, res) => {
 
     res.status(201).json({ message: 'Inquiry submitted successfully!' });
   } catch (error) {
-    console.error(error);
+    console.error('Failed to submit inquiry:', error);
     res.status(500).json({ error: 'Failed to submit inquiry' });
+  }
+});
+
+router.get('/', async (req, res) => {
+  try {
+    const contacts = await Contact.find();
+    res.json(contacts);
+  } catch (error) {
+    console.error('Error fetching contacts:', error);
+    res.status(500).json({ error: 'Internal Server Error' });
   }
 });
 

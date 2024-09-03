@@ -36,21 +36,8 @@ app.use((err, req, res, next) => {
   res.status(500).json({ error: 'Internal Server Error' });
 });
 
-// Conditionally run seed script if SEED_DB environment variable is set
-if (process.env.SEED_DB === 'true') {
-  import('./utils/seeds.js')
-    .then(() => {
-      console.log('Seeding complete');
-      process.exit(0);
-    })
-    .catch(err => {
-      console.error('Error running seed script:', err);
-      process.exit(1);
-    });
-} else {
-  // Start the server with error handling
-  const PORT = process.env.PORT || 4000;
-  app.listen(PORT, () => {
-    console.log(`Server running on port ${PORT}`);
-  });
-}
+// Start the server with error handling
+const PORT = process.env.PORT || 4000;
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
+});
