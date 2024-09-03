@@ -25,25 +25,28 @@ function UserContainer() {
     fetchUsers();
   }, []);
 
+  // Handle the loading state
   if (loading) {
     return <p>Loading users...</p>;
   }
 
+  // Handle errors
   if (error) {
     return <p>Error: {error}</p>;
   }
 
+  // Render the table only when data is loaded successfully
   return (
     <div className='user-dashboard-container'>
       <h2>User List</h2>
-      <table className='table table-striped  table-bordered'>
-        <thead style={{fontSize:'12px'}}>
+      <table className='table table-striped table-bordered'>
+        <thead style={{ fontSize: '12px' }}>
           <tr>
-            <th style={{fontSize:'12px'}}>USERNAME</th>
-            <th style={{fontSize:'12px'}}>FIRST</th>
-            <th style={{fontSize:'12px'}}>LAST</th>
-            <th style={{fontSize:'12px'}}>PHONE</th>
-            <th style={{fontSize:'12px'}}>EMAIL</th> 
+            <th style={{ fontSize: '12px' }}>USERNAME</th>
+            <th style={{ fontSize: '12px' }}>FIRST</th>
+            <th style={{ fontSize: '12px' }}>LAST</th>
+            <th style={{ fontSize: '12px' }}>PHONE</th>
+            <th style={{ fontSize: '12px' }}>EMAIL</th>
           </tr>
         </thead>
         <tbody className='mt-3'>
@@ -57,7 +60,6 @@ function UserContainer() {
             </tr>
           ))}
         </tbody>
- 
       </table>
     </div>
   );

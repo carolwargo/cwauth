@@ -40,7 +40,6 @@ function App() {
               <Route path="/login" element={<LoginPage />} />
               <Route path="/register" element={<RegisterPage />} />
               <Route path="/contact" element={<ContactPage />} />
-           
               <Route path="*" element={<NotFound />} />
             </Routes>
           </UserContextProvider>

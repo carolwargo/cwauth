@@ -21,15 +21,25 @@ function SubscribersContainer() {
         setLoading(false);
       }
     };
-  
+
     fetchSubscriptions();
   }, []);
-  
+
+  // Handle the loading state
+  if (loading) {
+    return <p>Loading subscriptions...</p>;
+  }
+
+  // Handle errors
+  if (error) {
+    return <p>Error: {error}</p>;
+  }
+
+  // Render the table only when data is loaded successfully
   return (
     <div className='subscriber-dashboard-container'>
       <h2>Subscription List</h2>
-      <table className='table table-striped table-bordered'
-        style={{fontSize:'14px'}}>
+      <table className='table table-striped table-bordered' style={{ fontSize: '14px' }}>
         <thead>
           <tr>
             <th>Email</th>
@@ -50,4 +60,3 @@ function SubscribersContainer() {
 }
 
 export default SubscribersContainer;
-

@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from "react";
 import UsersContainer from "../components/admin/UsersContainer";
-import EmailDashboard from "../components/admin/EmailComponent";
 import SubscribersContainer from "../components/admin/SubscribersContainer";
-import SignUpsContainer from "../components/admin/SignUpsContainer";
+//import SignUpsContainer from "../components/admin/SignUpsContainer";
 import ContactsContainer from "../components/admin/ContactsContainer";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Sidebar, Menu, MenuItem, SubMenu } from "react-pro-sidebar";
