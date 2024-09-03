@@ -25,16 +25,16 @@ export default function App() {
       className="footer" id="footer" 
       style={{ fontFamily: "Raleway" }}
     >
-      <div >
+    
         <MDBFooter className=" w3-black">
           <section className="text-center w3-padding-24">
-            <MDBContainer className="mt-5 text-center text-md-start">
+            <MDBContainer className="mt-5 text-center text-lg-start">
               <MDBRow className="mt-3">
                 <MDBCol
                   md="4"
                   lg="4"
                   xl="4"
-                  className="mx-auto mb-5 me-2 w3-padding-large"
+                  className="mx-auto mb-5 me-2"
                 >
                   <h6 className="mb-4 text-uppercase fw-bold">
                     <b>Carol</b> Wargo
@@ -74,7 +74,7 @@ export default function App() {
                   md="2"
                   lg="2"
                   xl="2"
-                  className="mx-auto mb-4 w3-padding-large"
+                  className="mx-auto mb-4"
                 >
                   <h6 className="w3-margin-bottom fw-bold">PAGES</h6>
 
@@ -115,7 +115,7 @@ export default function App() {
                   md="2"
                   lg="2"
                   xl="2"
-                  className="mx-auto mb-4 justify-content-center w3-padding-large"
+                  className="mx-auto mb-4 justify-content-center"
                 >
                   <h6 className="w3-margin-bottom fw-bold">SAMPLES</h6>
                   <p style={{ fontSize: "14px" }}>
@@ -160,7 +160,7 @@ export default function App() {
                   md="2"
                   lg="2"
                   xl="2"
-                  className="mx-auto mb-4 mb-md-0 flex-column justify-content-center w3-padding-large"
+                  className="mx-auto mb-4 mb-md-0 flex-column justify-content-center"
                 >
                   <h6 className="fw-bold">CONTACT</h6>
 
@@ -200,6 +200,10 @@ export default function App() {
             </MDBContainer>
           </section>
           <hr />
+
+
+
+
           <section className="text-center d-flex justify-content-center w3-padding-large border-bottom">
           <MDBContainer className="text-center">
           
@@ -220,7 +224,7 @@ export default function App() {
             </MDBContainer>
           </section>
         </MDBFooter>
-      </div>
+    
     </motion.div>
   );
 }
