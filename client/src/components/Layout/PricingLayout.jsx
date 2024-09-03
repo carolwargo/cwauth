@@ -1,18 +1,20 @@
 import React from 'react';
 import { Outlet } from 'react-router-dom';
 import BlackHeader from '../Header/BlackHeader';
-import Footer from '../Footer';
+import Footer from '../Footer.jsx';
 
-const MainLayout = () => {
+const PricingLayout = () => {
   return (
-    <div className="main-layout">
+    <div className="pricing-layout">
+       <BlackHeader />
       <main>
-        <BlackHeader />
+       
         <Outlet />
-        <Footer/>
+     
       </main>
+      <Footer/>
     </div>
   );
 };
 
-export default MainLayout;
+export default PricingLayout;

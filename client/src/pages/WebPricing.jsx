@@ -16,7 +16,6 @@ import { PiProjectorScreenChartFill } from "react-icons/pi";
 import { PiSignatureLight } from "react-icons/pi";
 import { Link } from "react-router-dom";
 
-
 const WebPricing = () => {
   const { ref, inView } = useInView({
     triggerOnce: false, // Animation triggers only once
@@ -32,7 +31,6 @@ const WebPricing = () => {
         backgroundAttachment: "fixed",
         height: "125vh",
         zIndex: "-1",
-        
       }}
     >
       <svg xmlns="http://www.w3.org/2000/svg" className="d-none">
@@ -67,9 +65,11 @@ const WebPricing = () => {
       >
         <header>
           <div className="container-fluid text-end">
-        <nav className="d-inline-flex fw-bold mt-2 mt-md-0 ms-md-auto justify-content-center"
-            style={{fontSize:'15px'}}>
-               <a
+            <nav
+              className="d-inline-flex fw-bold mt-2 mt-md-0 ms-md-auto justify-content-center"
+              style={{ fontSize: "15px" }}
+            >
+              <a
                 className="me-3 py-2 link-body-emphasis text-decoration-underline"
                 href="/"
               >
@@ -81,23 +81,23 @@ const WebPricing = () => {
               >
                 Features
               </a>
-            
+
               <a
                 className="me-3 py-2 link-body-emphasis text-decoration-underline"
                 href="/"
               >
                 Support
               </a>
-            
             </nav>
-            </div>
+          </div>
           <div className="container">
             <div className="pricing-header mb-4 pb-md-4 mx-auto text-center">
               <h1 className="display-4 fw-normal text-body-emphasis">
                 Plans & Pricing
-                </h1>
-                <b>
-                <hr/></b>
+              </h1>
+              <b>
+                <hr />
+              </b>
               <p className="fs-5 text-body-black">
                 Whether you're an individual developer, a growing startup, or a
                 large corporation, our flexible pricing plans ensure you get the
@@ -109,7 +109,7 @@ const WebPricing = () => {
             </div>
           </div>
         </header>
-    
+
         <div className="container">
           <div className="row  row-cols-md-3 mb-3">
             <div className="col justify-content-center">
@@ -122,122 +122,382 @@ const WebPricing = () => {
                   boxShadow: "2rem 5rem 10rem rgba(255, 192, 203, 0.5)",
                 }}
               >
-             
                 <div className="container justify-content-center">
-                <div className="card-body py-4">
-                <h4 className="my-0 fw-normal">Essentials</h4>
-                <p className='text-secondary' style={{fontSize:'14px'}}>For Professionals</p>
-                 
-                  <h1 className="card-title pricing-card-title">
-                    $9.99
-                    <small className="text-body-secondary fw-light">/mo</small>
-                  </h1>
-                  <div>
-                  <button
-                    type="button"
-                    className="w-100 btn btn-lg btn-dark mt-3"
-                  >
-                    Try for free
-                  </button>
-                <Link> <p className='text-secondary w3-padding-16'>or Buy Now <HiOutlineArrowNarrowRight/></p></Link> 
-                
-                  <ul className="mt-3 mb-4 justify-content-center list-unstyled">
-                 
-                    <li className='mt-1'><FaRegUserCircle className="w3-margin-right fw-bold" style={{fontSize:'16px'}}/> <span style={{fontSize:'12px'}}></span> 1 user included</li>
-                    <li className='mt-1'><RiRestartLine className="w3-margin-right fw-bold" style={{fontSize:'16px'}}/> <span style={{fontSize:'12px'}}>2 GB of  of team storage</span></li>
-                    <li className='mt-1'> < BsSend className="w3-margin-right fw-bold" style={{fontSize:'16px'}}/> <span style={{fontSize:'12px'}}>Transfer files up to 20 GB</span></li>
-                    <li className='mt-1'> <VscGraphLine  className="w3-margin-right fw-bold" style={{fontSize:'16px'}}/> <span style={{fontSize:'12px'}}>File engagement tracker</span> </li>
-                    <li className='mt-1'> < PiProjectorScreenChartFill className="w3-margin-right fw-bold" style={{fontSize:'16px'}}/> <span style={{fontSize:'12px'}}>Record, review, and edit video</span> </li>                   
-                    <li className='mt-1'> <GrDocumentPdf className="w3-margin-right fw-bold" style={{fontSize:'16px'}}/> <span style={{fontSize:'12px'}}>PDF editing</span> </li>
-                    <li className='mt-1'> <MdOutlineAdminPanelSettings className="w3-margin-right fw-bold" style={{fontSize:'16px'}}/> <span style={{fontSize:'12px'}}>1-admin role setup</span></li>
-                    <li className='mt-1'> <PiSignatureLight className="w3-margin-right fw-bold" style={{fontSize:'16px'}}/> <span style={{fontSize:'12px'}}>Limited signature requests</span></li>
-                    <li className='mt-1'> < BiSupport className="w3-margin-right fw-bold" style={{fontSize:'16px'}}/> <span style={{fontSize:'12px'}}>Limited Email Support</span> </li>
-                  </ul>
-                </div>
-                <div className="container">
-                <Link> <p className='w3-padding-top-16'>view all features </p></Link> 
-                </div>
-                </div>
+                  <div className="card-body py-4">
+                    <h4 className="my-0 fw-normal">One-Page Website</h4>
+                    <p className="text-secondary" style={{ fontSize: "14px" }}>
+                      For Personal Use or Startups
+                    </p>
+
+                    <h1 className="card-title pricing-card-title">
+                      Starting at $399
+                      <small className="text-body-secondary fw-light">
+                        /base
+                      </small>
+                    </h1>
+                    <div>
+                      <button
+                        type="button"
+                        className="w-100 btn btn-lg btn-dark mt-3"
+                      >
+                        Learn More
+                      </button>
+                      <h6 className="text-dark mt-3 py-2 text-body-emphasis">5 SECTIONS</h6>
+
+                      <ul className="mb-4 justify-content-center list-unstyled">
+                        <li>
+                          <FaRegUserCircle
+                            className="w3-margin-right fw-bold"
+                            style={{ fontSize: "16px" }}
+                          />{" "}
+                          <span style={{ fontSize: "12px" }}></span> 1 user
+                          included
+                        </li>
+                        <li className="mt-1">
+                          <RiRestartLine
+                            className="w3-margin-right fw-bold"
+                            style={{ fontSize: "16px" }}
+                          />{" "}
+                          <span style={{ fontSize: "12px" }}>
+                            2 GB of of team storage
+                          </span>
+                        </li>
+                        <li className="mt-1">
+                          {" "}
+                          <BsSend
+                            className="w3-margin-right fw-bold"
+                            style={{ fontSize: "16px" }}
+                          />{" "}
+                          <span style={{ fontSize: "12px" }}>
+                            Transfer files up to 20 GB
+                          </span>
+                        </li>
+                        <li className="mt-1">
+                          {" "}
+                          <VscGraphLine
+                            className="w3-margin-right fw-bold"
+                            style={{ fontSize: "16px" }}
+                          />{" "}
+                          <span style={{ fontSize: "12px" }}>
+                            File engagement tracker
+                          </span>{" "}
+                        </li>
+                        <li className="mt-1">
+                          {" "}
+                          <PiProjectorScreenChartFill
+                            className="w3-margin-right fw-bold"
+                            style={{ fontSize: "16px" }}
+                          />{" "}
+                          <span style={{ fontSize: "12px" }}>
+                            Record, review, and edit video
+                          </span>{" "}
+                        </li>
+                        <li className="mt-1">
+                          {" "}
+                          <GrDocumentPdf
+                            className="w3-margin-right fw-bold"
+                            style={{ fontSize: "16px" }}
+                          />{" "}
+                          <span style={{ fontSize: "12px" }}>PDF editing</span>{" "}
+                        </li>
+                        <li className="mt-1">
+                          {" "}
+                          <MdOutlineAdminPanelSettings
+                            className="w3-margin-right fw-bold"
+                            style={{ fontSize: "16px" }}
+                          />{" "}
+                          <span style={{ fontSize: "12px" }}>
+                            1-admin role setup
+                          </span>
+                        </li>
+                        <li className="mt-1">
+                          {" "}
+                          <PiSignatureLight
+                            className="w3-margin-right fw-bold"
+                            style={{ fontSize: "16px" }}
+                          />{" "}
+                          <span style={{ fontSize: "12px" }}>
+                            Limited signature requests
+                          </span>
+                        </li>
+                        <li className="mt-1">
+                          {" "}
+                          <BiSupport
+                            className="w3-margin-right fw-bold"
+                            style={{ fontSize: "16px" }}
+                          />{" "}
+                          <span style={{ fontSize: "12px" }}>
+                            Limited Email Support
+                          </span>{" "}
+                        </li>
+                      </ul>
+                    </div>
+                    <div className="container">
+                      <Link>
+                        {" "}
+                        <p className="w3-padding-top-16">view all features </p>
+                      </Link>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
             <div className="col justify-content-center">
-              <div
-                className="card mb-4 rounded-3 shadow-lg w3-light-grey"
-              >
+              <div className="card mb-4 rounded-3 shadow-lg w3-light-grey">
                 <div className="container justify-content-center">
-                <div className="card-body py-4">
-                <h4 className="my-0 fw-normal">Business</h4>
-                <p className='text-secondary' style={{fontSize:'14px'}}>For small teams</p>
-                <h1 className="card-title pricing-card-title"> $15
-                    <small className="text-body-secondary fw-light">/mo</small>
-                  </h1>
-                  <div>
-                  <button
-                    type="button"
-                    className="w-100 btn btn-lg btn-dark mt-3"
-                  >
-                    Try for free
-                  </button>
-                <Link> <p className='text-secondary w3-padding-16'>or Buy Now <HiOutlineArrowNarrowRight/></p></Link> 
-                 
-                  <ul className="mt-3 mb-4 justify-content-center list-unstyled">
-                    <li className='mt-1'><FaRegUserCircle className="w3-margin-right fw-bold" style={{fontSize:'16px'}}/> <span style={{fontSize:'12px'}}></span> 20 users included</li>
-                    <li className='mt-1'><RiRestartLine className="w3-margin-right fw-bold" style={{fontSize:'16px'}}/> <span style={{fontSize:'12px'}}>10 GB of  of team storage</span></li>
-                    <li className='mt-1'> < BsSend className="w3-margin-right fw-bold" style={{fontSize:'16px'}}/> <span style={{fontSize:'12px'}}>Transfer files up to 125 GB</span></li>
-                   <li className='mt-1'> <VscGraphLine  className="w3-margin-right fw-bold" style={{fontSize:'16px'}}/> <span style={{fontSize:'12px'}}>File engagement tracker</span> </li>
-                    <li className='mt-1'> < PiProjectorScreenChartFill className="w3-margin-right fw-bold" style={{fontSize:'16px'}}/> <span style={{fontSize:'12px'}}>Record, review, and edit video</span> </li>                   
-                    <li className='mt-1'> <GrDocumentPdf className="w3-margin-right fw-bold" style={{fontSize:'16px'}}/> <span style={{fontSize:'12px'}}>PDF editing</span> </li>
-                    <li className='mt-1'> <MdOutlineAdminPanelSettings className="w3-margin-right fw-bold" style={{fontSize:'16px'}}/> <span style={{fontSize:'12px'}}>2-admin role setup</span></li>
-                    <li className='mt-1'> <PiSignatureLight className="w3-margin-right fw-bold" style={{fontSize:'16px'}}/> <span style={{fontSize:'12px'}}>Limited signature requests</span></li>
-                    <li className='mt-1'> < BiSupport className="w3-margin-right fw-bold" style={{fontSize:'16px'}}/> <span style={{fontSize:'12px'}}>Limited Email Support</span> </li>
-                  </ul>
-                </div>
-                <div className="container">
-                <Link> <p className='w3-padding-top-16'>view all features </p></Link> 
-                </div>
-                </div>
+                  <div className="card-body py-4">
+                    <h4 className="my-0 fw-normal">Business</h4>
+                    <p className="text-secondary" style={{ fontSize: "14px" }}>
+                      For small teams
+                    </p>
+                    <h1 className="card-title pricing-card-title">
+                      {" "}
+                      Starting at $559
+                      <small className="text-body-secondary fw-light">
+                        /base
+                      </small>
+                    </h1>
+                    <div>
+                      <button
+                        type="button"
+                        className="w-100 btn btn-lg btn-dark mt-3"
+                      >
+                        Try for free
+                      </button>
+                      <Link>
+                        {" "}
+                        <p className="text-secondary w3-padding-16">
+                          or Buy Now <HiOutlineArrowNarrowRight />
+                        </p>
+                      </Link>
+
+                      <ul className="mt-3 mb-4 justify-content-center list-unstyled">
+                        <li className="mt-1">
+                          <FaRegUserCircle
+                            className="w3-margin-right fw-bold"
+                            style={{ fontSize: "16px" }}
+                          />{" "}
+                          <span style={{ fontSize: "12px" }}></span> 20 users
+                          included
+                        </li>
+                        <li className="mt-1">
+                          <RiRestartLine
+                            className="w3-margin-right fw-bold"
+                            style={{ fontSize: "16px" }}
+                          />{" "}
+                          <span style={{ fontSize: "12px" }}>
+                            10 GB of of team storage
+                          </span>
+                        </li>
+                        <li className="mt-1">
+                          {" "}
+                          <BsSend
+                            className="w3-margin-right fw-bold"
+                            style={{ fontSize: "16px" }}
+                          />{" "}
+                          <span style={{ fontSize: "12px" }}>
+                            Transfer files up to 125 GB
+                          </span>
+                        </li>
+                        <li className="mt-1">
+                          {" "}
+                          <VscGraphLine
+                            className="w3-margin-right fw-bold"
+                            style={{ fontSize: "16px" }}
+                          />{" "}
+                          <span style={{ fontSize: "12px" }}>
+                            File engagement tracker
+                          </span>{" "}
+                        </li>
+                        <li className="mt-1">
+                          {" "}
+                          <PiProjectorScreenChartFill
+                            className="w3-margin-right fw-bold"
+                            style={{ fontSize: "16px" }}
+                          />{" "}
+                          <span style={{ fontSize: "12px" }}>
+                            Record, review, and edit video
+                          </span>{" "}
+                        </li>
+                        <li className="mt-1">
+                          {" "}
+                          <GrDocumentPdf
+                            className="w3-margin-right fw-bold"
+                            style={{ fontSize: "16px" }}
+                          />{" "}
+                          <span style={{ fontSize: "12px" }}>PDF editing</span>{" "}
+                        </li>
+                        <li className="mt-1">
+                          {" "}
+                          <MdOutlineAdminPanelSettings
+                            className="w3-margin-right fw-bold"
+                            style={{ fontSize: "16px" }}
+                          />{" "}
+                          <span style={{ fontSize: "12px" }}>
+                            2-admin role setup
+                          </span>
+                        </li>
+                        <li className="mt-1">
+                          {" "}
+                          <PiSignatureLight
+                            className="w3-margin-right fw-bold"
+                            style={{ fontSize: "16px" }}
+                          />{" "}
+                          <span style={{ fontSize: "12px" }}>
+                            Limited signature requests
+                          </span>
+                        </li>
+                        <li className="mt-1">
+                          {" "}
+                          <BiSupport
+                            className="w3-margin-right fw-bold"
+                            style={{ fontSize: "16px" }}
+                          />{" "}
+                          <span style={{ fontSize: "12px" }}>
+                            Limited Email Support
+                          </span>{" "}
+                        </li>
+                      </ul>
+                    </div>
+                    <div className="container">
+                      <Link>
+                        {" "}
+                        <p className="w3-padding-top-16">view all features </p>
+                      </Link>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
             <div className="col justify-content-center">
               <div
                 className="card mb-4 rounded-3 shadow-lg"
-             style={{
-                backgroundImage: 'linear-gradient( #f6145c,  #ad385d, #f6145c)'}}>
+                style={{
+                  backgroundImage:
+                    "linear-gradient( #f6145c,  #ad385d, #f6145c)",
+                }}
+              >
                 <div className="container justify-content-center text-light">
-                <div className="card-body py-4"> 
-                   <h4 className="my-0 fw-normal">Pro Plus</h4>
-                <p className='text-white' style={{fontSize:'14px'}}>For large teams</p>
-                <h1 className="card-title pricing-card-title">      $29
-                    <small className="text-white fw-light">/mo</small>
-                  </h1>
-                  <div>
-                  <button
-                    type="button"
-                    className="w-100 btn btn-lg btn-dark mt-3"
-                  >
-                    Try for free
-                  </button>
-                <Link> <p className='text-white w3-padding-16 w3-hover-text-gray'>or Buy Now <HiOutlineArrowNarrowRight/></p></Link> 
-                 
+                  <div className="card-body py-4">
+                    <h4 className="my-0 fw-normal">Pro Plus</h4>
+                    <p className="text-white" style={{ fontSize: "14px" }}>
+                      For large teams
+                    </p>
+                    <h1 className="card-title pricing-card-title">
+                      {" "}
+                      $29
+                      <small className="text-white fw-light">/mo</small>
+                    </h1>
+                    <div>
+                      <button
+                        type="button"
+                        className="w-100 btn btn-lg btn-dark mt-3"
+                      >
+                        Try for free
+                      </button>
+                      <Link>
+                        {" "}
+                        <p className="text-white w3-padding-16 w3-hover-text-gray">
+                          or Buy Now <HiOutlineArrowNarrowRight />
+                        </p>
+                      </Link>
 
-                  <ul className="mt-3 mb-4 list-unstyled justify-content-center">
-                  <li className='mt-1'> <FaRegUserCircle className="w3-margin-right" style={{fontSize:'16px'}}/> <span style={{fontSize:'12px'}}></span> 30 users included</li>
-                    <li className='mt-1'><RiRestartLine className="w3-margin-right fw-bold" style={{fontSize:'16px'}}/> <span style={{fontSize:'12px'}}>15 GB of  of team storage</span></li>
-                    <li className='mt-1'> < BsSend className="w3-margin-right fw-bold" style={{fontSize:'16px'}}/> <span style={{fontSize:'12px'}}>Transfer files up to 250 GB</span></li>
-                    <li className='mt-1'> <VscGraphLine  className="w3-margin-right fw-bold" style={{fontSize:'16px'}}/> <span style={{fontSize:'12px'}}>File engagement tracker</span> </li>
-                    <li className='mt-1'> < PiProjectorScreenChartFill className="w3-margin-right fw-bold" style={{fontSize:'16px'}}/> <span style={{fontSize:'12px'}}>Record, review, and edit video</span> </li>                   
-                    <li className='mt-1'> <GrDocumentPdf className="w3-margin-right fw-bold" style={{fontSize:'16px'}}/> <span style={{fontSize:'12px'}}>PDF editing</span> </li>
-                    <li className='mt-1'> <MdOutlineAdminPanelSettings className="w3-margin-right fw-bold" style={{fontSize:'16px'}}/> <span style={{fontSize:'12px'}}>1-admin role setup</span></li>
-                    <li className='mt-1'> <PiSignatureLight className="w3-margin-right fw-bold" style={{fontSize:'16px'}}/> <span style={{fontSize:'12px'}}>Limited signature requests</span></li>
-                    <li className='mt-1'> < BiSupport className="w3-margin-right fw-bold" style={{fontSize:'16px'}}/> <span style={{fontSize:'12px'}}>Limited Email Support</span> </li>
-                  </ul>
-                </div>
-                <div className="container">
-                <Link> <p className='w3-padding-top-16'>view all features </p></Link> 
-                </div>
-                </div>
+                      <ul className="mt-3 mb-4 list-unstyled justify-content-center">
+                        <li className="mt-1">
+                          {" "}
+                          <FaRegUserCircle
+                            className="w3-margin-right"
+                            style={{ fontSize: "16px" }}
+                          />{" "}
+                          <span style={{ fontSize: "12px" }}></span> 30 users
+                          included
+                        </li>
+                        <li className="mt-1">
+                          <RiRestartLine
+                            className="w3-margin-right fw-bold"
+                            style={{ fontSize: "16px" }}
+                          />{" "}
+                          <span style={{ fontSize: "12px" }}>
+                            15 GB of of team storage
+                          </span>
+                        </li>
+                        <li className="mt-1">
+                          {" "}
+                          <BsSend
+                            className="w3-margin-right fw-bold"
+                            style={{ fontSize: "16px" }}
+                          />{" "}
+                          <span style={{ fontSize: "12px" }}>
+                            Transfer files up to 250 GB
+                          </span>
+                        </li>
+                        <li className="mt-1">
+                          {" "}
+                          <VscGraphLine
+                            className="w3-margin-right fw-bold"
+                            style={{ fontSize: "16px" }}
+                          />{" "}
+                          <span style={{ fontSize: "12px" }}>
+                            File engagement tracker
+                          </span>{" "}
+                        </li>
+                        <li className="mt-1">
+                          {" "}
+                          <PiProjectorScreenChartFill
+                            className="w3-margin-right fw-bold"
+                            style={{ fontSize: "16px" }}
+                          />{" "}
+                          <span style={{ fontSize: "12px" }}>
+                            Record, review, and edit video
+                          </span>{" "}
+                        </li>
+                        <li className="mt-1">
+                          {" "}
+                          <GrDocumentPdf
+                            className="w3-margin-right fw-bold"
+                            style={{ fontSize: "16px" }}
+                          />{" "}
+                          <span style={{ fontSize: "12px" }}>PDF editing</span>{" "}
+                        </li>
+                        <li className="mt-1">
+                          {" "}
+                          <MdOutlineAdminPanelSettings
+                            className="w3-margin-right fw-bold"
+                            style={{ fontSize: "16px" }}
+                          />{" "}
+                          <span style={{ fontSize: "12px" }}>
+                            1-admin role setup
+                          </span>
+                        </li>
+                        <li className="mt-1">
+                          {" "}
+                          <PiSignatureLight
+                            className="w3-margin-right fw-bold"
+                            style={{ fontSize: "16px" }}
+                          />{" "}
+                          <span style={{ fontSize: "12px" }}>
+                            Limited signature requests
+                          </span>
+                        </li>
+                        <li className="mt-1">
+                          {" "}
+                          <BiSupport
+                            className="w3-margin-right fw-bold"
+                            style={{ fontSize: "16px" }}
+                          />{" "}
+                          <span style={{ fontSize: "12px" }}>
+                            Limited Email Support
+                          </span>{" "}
+                        </li>
+                      </ul>
+                    </div>
+                    <div className="container">
+                      <Link>
+                        {" "}
+                        <p className="w3-padding-top-16">view all features </p>
+                      </Link>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -247,16 +507,16 @@ const WebPricing = () => {
         <div className="w-100 py-1">
           <div className="container w3-padding-48">
             <div className="py-3">
-          <h3 className="display-6 fw-normal text-body-emphasis text-center">
-            Compare plans
-          </h3>
-          <p>
-            Choosing the best cloud storage provider is difficult. This guide
-            shows the 10 top cloud storage services for cost, safety and
-            collaboration features, covering personal cloud storage and business
-            file storage solutions.
-          </p>
-          </div>
+              <h3 className="display-6 fw-normal text-body-emphasis text-center">
+                Compare plans
+              </h3>
+              <p>
+                Choosing the best cloud storage provider is difficult. This
+                guide shows the 10 top cloud storage services for cost, safety
+                and collaboration features, covering personal cloud storage and
+                business file storage solutions.
+              </p>
+            </div>
             <div className="bg-dark rounded shadow w3-padding-large w3-padding-24 ">
               <table className="table table-dark text-white text-center">
                 <thead>
