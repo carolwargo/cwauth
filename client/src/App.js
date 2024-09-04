@@ -14,6 +14,12 @@ import PricingLayout from "./components/Layout/PricingLayout.jsx";
 import WebPricing from "./pages/WebPricing.jsx";
 import MultiDropNav from "./components/Navgation/MultiDropNav.jsx";
 import HomeLayout from "./components/Layout/MainLayout.jsx";
+
+import GraphicsPage from "./pages/services/GraphicsPage.jsx";
+import WebDevPage from "./pages/services/WebDevPage.jsx";
+import DigitalMarketingPage from "./pages/services/DigitalMarketingPage.jsx";
+import ITPage from "./pages/services/ITPage.jsx";
+
 import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
@@ -40,6 +46,12 @@ function App() {
               <Route path="/login" element={<LoginPage />} />
               <Route path="/register" element={<RegisterPage />} />
               <Route path="/contact" element={<ContactPage />} />
+
+              <Route path="/graphics" element={<GraphicsPage />} />
+              <Route path="/web-dev" element={<WebDevPage />} />
+              <Route path="/digital-marketing" element={<DigitalMarketingPage />} />
+              <Route path="/it" element={<ITPage />} />
+
               <Route path="*" element={<NotFound />} />
             </Routes>
           </UserContextProvider>
