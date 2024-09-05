@@ -1,7 +1,7 @@
 import React from "react";
-import BrandBar from "../BrandBar";
-import MarketingMetrics from "../../assets/images/MarketingMetrics.png";
-import '../../styles/features.css';
+import BrandBar from "./BrandBar";
+import MarketingMetrics from "../../../assets/images/MarketingMetrics.png";
+import '../../../styles/features.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const WebFeatures = () => {

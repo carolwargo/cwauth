@@ -1,11 +1,11 @@
 import React from 'react';
 import { Outlet } from 'react-router-dom';
-import BlackHeader from '../Header/BlackHeader';
+import BlackHeader from '../Header/BlackHeader.jsx';
 import Footer from '../Footer.jsx';
 
-const PricingLayout = () => {
+const ServicesLayout = () => {
   return (
-    <div className="pricing-layout">
+    <div className="services-layout">
        <BlackHeader />
       <main>
        
@@ -17,4 +17,4 @@ const PricingLayout = () => {
   );
 };
 
-export default PricingLayout;
+export default ServicesLayout;

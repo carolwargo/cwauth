@@ -1,10 +1,11 @@
 import React from 'react';
-
+import DigitalMarketingFeatures from '../../components/services/DigitalMarketingComponents/DigitalMarketingFeatures';
 const DigitalMarketingPage = () => {
     return (
         <div>
-        <h1>Digital Marketing</h1>
-        <p>Coming soon...</p>
+           <div>
+       <DigitalMarketingFeatures/>
+        </div>
         </div>
     );
     };

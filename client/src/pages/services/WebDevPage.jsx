@@ -1,5 +1,5 @@
 import React from 'react';
-import WebFeatures from '../../components/WebDevComponents/WebFeatures';
+import WebFeatures from '../../components/services/WebDevComponents/WebFeatures';
 
 const WebDev = () => {
     return (

@@ -10,7 +10,7 @@ import ErrorBoundary from "./ErrorBoundary";
 import HomePage from "./pages/HomePage";
 import ContactPage from "./pages/ContactPage";
 import AdminLayout from "./components/Layout/AdminLayout.jsx";
-import PricingLayout from "./components/Layout/PricingLayout.jsx";
+import PricingLayout from "./components/Layout/ServicesLayout.jsx";
 import WebPricing from "./pages/WebPricing.jsx";
 import MultiDropNav from "./components/Navgation/MultiDropNav.jsx";
 import HomeLayout from "./components/Layout/MainLayout.jsx";
@@ -19,6 +19,8 @@ import GraphicsPage from "./pages/services/GraphicsPage.jsx";
 import WebDevPage from "./pages/services/WebDevPage.jsx";
 import DigitalMarketingPage from "./pages/services/DigitalMarketingPage.jsx";
 import ITPage from "./pages/services/ITPage.jsx";
+import SEOAnalyticsPage from "./pages/services/SEOAnalyticsPage.jsx";
+import ContentCreationPage from "./pages/services/ContentCreationPage.jsx";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 
@@ -51,7 +53,8 @@ function App() {
               <Route path="/web-dev" element={<WebDevPage />} />
               <Route path="/digital-marketing" element={<DigitalMarketingPage />} />
               <Route path="/it" element={<ITPage />} />
-
+              <Route path="/seo-analytics" element={<SEOAnalyticsPage />} />
+              <Route path="/content-creation" element={<ContentCreationPage />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </UserContextProvider>

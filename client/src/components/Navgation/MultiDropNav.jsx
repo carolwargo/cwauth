@@ -49,14 +49,24 @@ const CustomNavbar = () => {
           onMouseEnter={() => handleDropdownToggle("services")}
           onMouseLeave={() => handleDropdownToggle(null)}
         >
-          <NavDropdown.Item href="/web-pricing">
+          <NavDropdown.Item href="/web-dev">
             Web Development
           </NavDropdown.Item>
-          <NavDropdown.Item href="/seo-pricing">
-            SEO
+          <NavDropdown.Item href="/graphics">
+            Graphics
           </NavDropdown.Item>
-          <NavDropdown.Item href="/content-pricing">
+          <NavDropdown.Item href="/digital-marketing">
+           Digital Marketing
+          </NavDropdown.Item>
+          <NavDropdown.Item href="/content-creation">
             Content Creation
+        {/** Content Creation*/}    
+          </NavDropdown.Item>
+          <NavDropdown.Item href="/seo-analytics">
+            SEO & Analytics
+          </NavDropdown.Item>
+          <NavDropdown.Item href="/it">
+          Tech Support
           </NavDropdown.Item>
         </NavDropdown>
 
