@@ -11,6 +11,7 @@ import HomePage from "./pages/HomePage";
 import ContactPage from "./pages/ContactPage";
 import AdminLayout from "./components/Layout/AdminLayout.jsx";
 import PricingLayout from "./components/Layout/ServicesLayout.jsx";
+import DigitalMarketingLayout from "./components/Layout/DigitalMarketingLayout.jsx";
 import WebPricing from "./pages/WebPricing.jsx";
 import MultiDropNav from "./components/Navgation/MultiDropNav.jsx";
 import HomeLayout from "./components/Layout/MainLayout.jsx";
@@ -40,6 +41,11 @@ function App() {
               <Route path="/admin" element={<AdminLayout />}>
                 <Route index element={<AdminPage />} />
               </Route>
+
+              <Route path="/digital-marketing" element={<DigitalMarketingLayout />}>
+                <Route index element={<DigitalMarketingPage />} />
+              </Route>
+              
               <Route path="/pricing" element={<PricingLayout />}>
                 <Route index element={<WebPricing />} />
               </Route>
