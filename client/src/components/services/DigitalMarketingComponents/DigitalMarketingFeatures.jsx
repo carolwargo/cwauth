@@ -1,86 +1,14 @@
 import React from "react";
-import ContactForm from '../../forms/ContactForm'
 import MarketingMetrics from "../../../assets/images/MarketingMetrics.png";
-import ButtonBG from "../../../assets/images/ButtonBG.png";
+import Schedule from "../../../assets/images/Schedule.png";
+import Button from 'react-bootstrap/Button';
+import Card from 'react-bootstrap/Card';
 import './digital-marketing.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const DigitalMarketingFeatures = () => {
     return (
       <div>
-        <style>
-          {`
-         
-      @media (min-width: 768px) {
-        .bd-placeholder-img-lg {
-          font-size: 3.5rem;
-        }
-      }
-
-      .icon-link {
-            
-            color: #000;
-            text-decoration: underline;
-            font-size: 1rem;
-            
-
-      .b-example-divider {
-        width: 100%;
-        height: 3rem;
-        background-color: rgba(0, 0, 0, .1);
-        border: solid rgba(0, 0, 0, .15);
-        border-width: 1px 0;
-        box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
-      }
-
-      .b-example-vr {
-        flex-shrink: 0;
-        width: 1.5rem;
-        height: 100vh;
-      }
-
-      .bi {
-        vertical-align: -.125em;
-        fill: currentColor;
-      }
-
-      .nav-scroller {
-        position: relative;
-        z-index: 2;
-        height: 2.75rem;
-        overflow-y: hidden;
-      }
-
-      .nav-scroller .nav {
-        display: flex;
-        flex-wrap: nowrap;
-        padding-bottom: 1rem;
-        margin-top: -1px;
-        overflow-x: auto;
-        text-align: center;
-        white-space: nowrap;
-        -webkit-overflow-scrolling: touch;
-      }
-
-      .btn-bd-primary {
-        --bd-violet-bg: #712cf9;
-        --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
-
-        --bs-btn-font-weight: 600;
-        --bs-btn-color: var(--bs-white);
-        --bs-btn-bg: var(--bd-violet-bg);
-        --bs-btn-border-color: var(--bd-violet-bg);
-        --bs-btn-hover-color: var(--bs-white);
-        --bs-btn-hover-bg: #6528e0;
-        --bs-btn-hover-border-color: #6528e0;
-        --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
-        --bs-btn-active-color: var(--bs-btn-hover-color);
-        --bs-btn-active-bg: #5a23c8;
-        --bs-btn-active-border-color: #5a23c8;
-      }
-
-        `}
-        </style>
 
         <svg xmlns="http://www.w3.org/2000/svg" className="d-none">
       <symbol id="check2" viewBox="0 0 16 16">
@@ -151,55 +79,111 @@ const DigitalMarketingFeatures = () => {
   </symbol>
 </svg>
 
+
+
 <main>
 
-{/* Start Header Introduction */}
-<div className="flex-container justify-content-center align-items-end"
-  style={{
-    backgroundImage: `url(${ButtonBG})`,
-    backgroundSize: 'cover',
-    backgroundPosition: 'center',
-    backgroundRepeat: 'no-repeat',
-    width: '100%',
-    minHeight: '300px', // Ensure there's a minimum height
-    height: '100vh', // Make it full viewport height if needed
-    display: 'flex',
-    flexDirection: 'column'
-  }}>
+  {/* Start Digital Marketing Types */}
+  <div className="w3-container px-5 w3-padding-32 mt-4" 
+  id="marketing-types-grid"  
+  style={{ 
+    backgroundImage: 'linear-gradient(to left bottom, #fbedef, #fbedef, white, white, #fbedef, white, #fdccd4)'}}>
+   
+   <div className="row">
+      <div className="col-lg-7 w3-padding-large">
+    <h5 className=" text-capitalize">In today’s fast-paced digital landscape, standing out requires a tailored, multi-faceted marketing approach.</h5>
+    <h1 className="fw-bold">Digital Marketing Expertise</h1>
+   {/**  <p> We specialize in crafting strategies that drive engagement, 
+      boost conversions, and grow your online presence. From optimizing 
+      your website for higher conversion rates to leveraging influencer 
+      power and managing your brand’s reputation, we offer comprehensive 
+      solutions to meet all your marketing needs.</p>
+      */}
+    <p>Explore our core services below, each designed to help you connect 
+      with your audience and achieve measurable results. Whether you're 
+      looking to automate your marketing, enhance your video content, or 
+      improve your local SEO, our team is here to provide expert support 
+      every step of the way.</p>
+      </div>
+      <div className="col-lg-5"
+        style={{padding:'24px'}}>
+      <Card style={{ width: '100%' }} className="shadow">
+      <Card.Img variant="top" src={Schedule} alt="Marketing" 
+      className="w3-padding-large  img-fluid" />
+      <Card.Body   className="w3-padding-large w3-margin-bottom" >
+        <Card.Title>Card Title</Card.Title>
+        <Card.Text>
+          Some quick example text to build on the card title and make up the
+          bulk of the card's content.
+        </Card.Text>
+        <Button variant="primary">Go somewhere</Button>
+      </Card.Body>
+    </Card>
+        </div>
+   </div>
+  
+   <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 py-3 w3-padding-large mt-4">
+     <div className="col d-flex align-items-start">
+       <svg className="bi text-body-secondary flex-shrink-0 me-3" width="1.5em" height="1.5em"><use xlinkHref="#bootstrap"/></svg>
+       <div>
+         <h5 className="fw-bold mb-0 fs-5 text-body-emphasis">Conversion Rate Optimization</h5>
+         <p style={{fontSize:'13px'}}>Optimize your website's user experience to increase conversion rates. Our experts use A/B testing, heat maps, and user feedback to enhance your site's performance.</p>
+       </div>
+     </div>
+     <div className="col d-flex align-items-start">
+       <svg className="bi text-body-secondary flex-shrink-0 me-3" width="1.5em" height="1.5em"><use xlinkHref="#cpu-fill"/></svg>
+       <div>
+         <h5 className="fw-bold mb-0 fs-5 text-body-emphasis">Influencer Marketing</h5>
+         <p style={{fontSize:'13px'}}>Leverage the power of influencers to promote your brand. We connect you with industry influencers who can help you reach a wider audience and build trust.</p>
+       </div>
+     </div>
+     <div className="col d-flex align-items-start">
+       <svg className="bi text-body-secondary flex-shrink-0 me-3" width="1.5em" height="1.5em"><use xlinkHref="#calendar3"/></svg>
+       <div>
+         <h5 className="fw-bold mb-0 fs-5 text-body-emphasis">Marketing Automation</h5>
+         <p style={{fontSize:'13px'}}>Automate your marketing processes to save time and improve efficiency. Our services include CRM integration, lead nurturing, and automated email campaigns.</p>
+       </div>
+     </div>
+     <div className="col d-flex align-items-start">
+       <svg className="bi text-body-secondary flex-shrink-0 me-3" width="1.5em" height="1.5em"><use xlinkHref="#toggles2"/></svg>
+       <div>
+         <h5 className="fw-bold mb-0 fs-5 text-body-emphasis">Reputation Management</h5>
+         <p style={{fontSize:'13px'}}>Protect and enhance your brand's online reputation. We monitor reviews, manage public relations, and implement strategies to maintain a positive image.</p>
+       </div>
+     </div>
+     <div className="col d-flex align-items-start">
+       <svg className="bi text-body-secondary flex-shrink-0 me-3" width="1.5em" height="1.5em"><use xlinkHref="#speedometer2"/></svg>
+       <div>
+         <h5 className="fw-bold mb-0 fs-5 text-body-emphasis">Affiliate Marketing</h5>
+         <p style={{fontSize:'13px'}}>Expand your reach and boost sales through affiliate marketing. We manage your affiliate programs, recruit partners, and track performance to maximize results.</p>
+       </div>
+     </div>
+   
+       <div className="col d-flex align-items-start">
+       <svg className="bi text-body-secondary flex-shrink-0 me-3" width="1.75em" height="1.75em"><use xlinkHref="#home"/></svg>
+       <div>
+         <h5 className="fw-bold mb-0 fs-5 text-body-emphasis">Video Marketing</h5>
+         <p style={{fontSize:'13px'}}>Create engaging video content to capture your audience's attention. We offer video production, editing, and promotion services to enhance your marketing strategy.</p>
+       </div>
+     </div>
+     <div className="col d-flex align-items-start">
+       <svg className="bi text-body-secondary flex-shrink-0 me-3" width="1.5em" height="1.5em"><use xlinkHref="#geo-fill"/></svg>
+       <div>
+         <h5 className="fw-bold mb-0 fs-5 text-body-emphasis">Mobile Marketing</h5>
+         <p style={{fontSize:'13px'}}>Reach your audience on the go with mobile marketing strategies. We design mobile-friendly campaigns, optimize apps, and use SMS marketing to engage users.</p>
+       </div>
+     </div>
+     <div className="col d-flex align-items-start">
+       <svg className="bi text-body-secondary flex-shrink-0 me-3" width="1.5em" height="1.5em"><use xlinkHref="#tools"/></svg>
+       <div>
+         <h5 className="fw-bold mb-0 fs-5 text-body-emphasis">Local SEO</h5>
+         <p style={{fontSize:'13px'}}>Improve your local search presence and attract nearby customers. Our local SEO services include Google My Business optimization, local citations, and reviews management.</p>
+       </div>
+     </div>
+   </div>
+ </div>
+ {/* End Digital Marketing Types */}
 
-
-
-
-
-
-
-<div className="container-fluid justify-content-center align-items-center">
-    <div className="row w3-padding-small w3-padding-32 ">
-<div className="col-sm-12 col-md-8 px-5 py-2">
-<div className="container">
-<h1 className="w3-text-pink py-2" style={{fontSize:'4rem'}}>THE FOREFRONT OF DIGITAL MARKETING <span></span></h1>
-<h5 className="mb-2">  "Boost your traffic and elevate your brand with marketing strategies tailored to your unique goals. Our customized approach ensures that every tactic is aligned with your business objectives, driving sustainable growth and amplifying your online presence."
-  </h5>
-
-<p className="py-3">
-Take steps to grow your online presence - digital marketing offer the cost-effectiveness you need with the impact of an in-house team.
-  </p>
-<div>
-<button className="btn btn-dark shadow px-5 w3-margin-right w3-hover-blue-gray">contact</button>
-<button className="btn btn-dark shadow w3-hover-blue-gray px-5">contact</button>
-</div>
-</div>
-</div>
-
-<div className="col-sm-12 col-md-4 px-5 py-3">
-<ContactForm/>
-</div>
-</div>
-</div>
-</div>
-{/* End Header Introduction */}
-
- 
 
 
 
@@ -245,74 +229,11 @@ Take steps to grow your online presence - digital marketing offer the cost-effec
     </div>
   </div>
   {/* End Brands */}
-   {/* Start Digital Marketing Types */}
+  
    <div className="w3-container px-5 w3-black w3-padding-32 w3-margin-bottom">
    <h1 className="fw-bold text-body-white text-center">Brands our remote teams helped build:</h1>
    </div>
- 
-   <div className="w3-container px-5 py-3" id="icon-grid">
-   
-   <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 py-3 w3-margin-top">
-     <div className="col d-flex align-items-start">
-       <svg className="bi text-body-secondary flex-shrink-0 me-3" width="1.5em" height="1.5em"><use xlinkHref="#bootstrap"/></svg>
-       <div>
-         <h4 className="fw-bold mb-0 fs-4 text-body-emphasis">Conversion Rate Optimization</h4>
-         <p style={{fontSize:'13px'}}>Optimize your website's user experience to increase conversion rates. Our experts use A/B testing, heat maps, and user feedback to enhance your site's performance.</p>
-       </div>
-     </div>
-     <div className="col d-flex align-items-start">
-       <svg className="bi text-body-secondary flex-shrink-0 me-3" width="1.5em" height="1.5em"><use xlinkHref="#cpu-fill"/></svg>
-       <div>
-         <h4 className="fw-bold mb-0 fs-4 text-body-emphasis">Influencer Marketing</h4>
-         <p style={{fontSize:'13px'}}>Leverage the power of influencers to promote your brand. We connect you with industry influencers who can help you reach a wider audience and build trust.</p>
-       </div>
-     </div>
-     <div className="col d-flex align-items-start">
-       <svg className="bi text-body-secondary flex-shrink-0 me-3" width="1.5em" height="1.5em"><use xlinkHref="#calendar3"/></svg>
-       <div>
-         <h4 className="fw-bold mb-0 fs-4 text-body-emphasis">Marketing Automation</h4>
-         <p style={{fontSize:'13px'}}>Automate your marketing processes to save time and improve efficiency. Our services include CRM integration, lead nurturing, and automated email campaigns.</p>
-       </div>
-     </div>
-     <div className="col d-flex align-items-start">
-       <svg className="bi text-body-secondary flex-shrink-0 me-3" width="1.5em" height="1.5em"><use xlinkHref="#toggles2"/></svg>
-       <div>
-         <h4 className="fw-bold mb-0 fs-4 text-body-emphasis">Reputation Management</h4>
-         <p style={{fontSize:'13px'}}>Protect and enhance your brand's online reputation. We monitor reviews, manage public relations, and implement strategies to maintain a positive image.</p>
-       </div>
-     </div>
-     <div className="col d-flex align-items-start">
-       <svg className="bi text-body-secondary flex-shrink-0 me-3" width="1.5em" height="1.5em"><use xlinkHref="#speedometer2"/></svg>
-       <div>
-         <h4 className="fw-bold mb-0 fs-4 text-body-emphasis">Affiliate Marketing</h4>
-         <p style={{fontSize:'13px'}}>Expand your reach and boost sales through affiliate marketing. We manage your affiliate programs, recruit partners, and track performance to maximize results.</p>
-       </div>
-     </div>
-   
-       <div className="col d-flex align-items-start">
-       <svg className="bi text-body-secondary flex-shrink-0 me-3" width="1.75em" height="1.75em"><use xlinkHref="#home"/></svg>
-       <div>
-         <h4 className="fw-bold mb-0 fs-4 text-body-emphasis">Video Marketing</h4>
-         <p style={{fontSize:'13px'}}>Create engaging video content to capture your audience's attention. We offer video production, editing, and promotion services to enhance your marketing strategy.</p>
-       </div>
-     </div>
-     <div className="col d-flex align-items-start">
-       <svg className="bi text-body-secondary flex-shrink-0 me-3" width="1.5em" height="1.5em"><use xlinkHref="#geo-fill"/></svg>
-       <div>
-         <h4 className="fw-bold mb-0 fs-4 text-body-emphasis">Mobile Marketing</h4>
-         <p style={{fontSize:'13px'}}>Reach your audience on the go with mobile marketing strategies. We design mobile-friendly campaigns, optimize apps, and use SMS marketing to engage users.</p>
-       </div>
-     </div>
-     <div className="col d-flex align-items-start">
-       <svg className="bi text-body-secondary flex-shrink-0 me-3" width="1.5em" height="1.5em"><use xlinkHref="#tools"/></svg>
-       <div>
-         <h4 className="fw-bold mb-0 fs-4 text-body-emphasis">Local SEO</h4>
-         <p style={{fontSize:'13px'}}>Improve your local search presence and attract nearby customers. Our local SEO services include Google My Business optimization, local citations, and reviews management.</p>
-       </div>
-     </div>
-   </div>
- </div>
- {/* End Digital Marketing Types */}
+
 
 
 
