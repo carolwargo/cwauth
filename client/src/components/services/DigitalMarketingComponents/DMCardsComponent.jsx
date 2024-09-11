@@ -35,6 +35,9 @@ const DMCards = () => {
         exit={{ y: 20, opacity: 0.5 }}
         transition={{ duration: 0.8 }}
       >
+
+
+        
         {/**Start INTRO Web Components */}
         <div className="container mb-2 w3-padding-top-64">
           <div className="row d-flex justify-content-center align-items-center w3-padding-large w3-padding-32">

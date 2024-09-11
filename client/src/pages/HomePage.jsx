@@ -9,7 +9,7 @@ const HomePage = () => {
     <div>
  <BrandBar/>
    <div className="container">
-    <div className="row">
+    <div className="row w3-row-padding">
       <div className="col-sm-12 col-md-6 col-lg-6">
      <p>With a proven track record in corporate strategy, digital marketing, web and software development, and a keen eye for design principles and business analysis, I’m dedicated to helping you plan, build, and grow — taking your personal or professional ventures to the next level of success.
 

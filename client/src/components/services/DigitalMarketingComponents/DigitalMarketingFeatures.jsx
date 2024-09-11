@@ -84,11 +84,13 @@ const DigitalMarketingFeatures = () => {
 <main>
 
   {/* Start Digital Marketing Types */}
-  <div className="w3-container px-5 w3-padding-32 mt-4" 
-  id="marketing-types-grid"  
-  style={{ 
-    backgroundImage: 'linear-gradient(to left bottom, #fbedef, #fbedef, white, white, #fbedef, white, #fdccd4)'}}>
-   
+
+       <div className="w3-container px-5 py-5"
+         style={{ 
+          backgroundImage: 'linear-gradient(to left bottom, #fbedef, #fbedef, white, white, #fbedef, white, #fdccd4)'}}
+          >
+ <h2 className="pb-2 border-bottom">Columns with Icons</h2>
+     
    <div className="row">
       <div className="col-lg-7 w3-padding-large">
     <h5 className=" text-capitalize">In today’s fast-paced digital landscape, standing out requires a tailored, multi-faceted marketing approach.</h5>
@@ -121,8 +123,8 @@ const DigitalMarketingFeatures = () => {
     </Card>
         </div>
    </div>
-  
-   <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 py-3 w3-padding-large mt-4">
+
+   <div className="row g-4 py-5 row-cols-1 row-cols-sm-2 row-cols-lg-4 ">
      <div className="col d-flex align-items-start">
        <svg className="bi text-body-secondary flex-shrink-0 me-3" width="1.5em" height="1.5em"><use xlinkHref="#bootstrap"/></svg>
        <div>
@@ -180,8 +182,9 @@ const DigitalMarketingFeatures = () => {
          <p style={{fontSize:'13px'}}>Improve your local search presence and attract nearby customers. Our local SEO services include Google My Business optimization, local citations, and reviews management.</p>
        </div>
      </div>
-   </div>
- </div>
+     </div>
+     </div>
+ 
  {/* End Digital Marketing Types */}
 
 

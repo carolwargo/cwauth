@@ -5,8 +5,8 @@ import Me from '../../assets/images/Me.png';
 function BasicExample() {
   return (
     <div>
-   <div className="row">
-    <div className="col">
+   <div className="row w3-row-padding">
+    <div className="col-sm-12 g-2">
     <Card className='shadow'>
       <Card.Img variant="top" src={Me} />
       <Card.Body>
@@ -19,7 +19,7 @@ function BasicExample() {
       </Card.Body>
     </Card>
     </div>
-    <div className="col">
+      <div className="col-sm-12 g-2">
     <Card className='shadow'>
       <Card.Img variant="top" src={Me} />
       <Card.Body>
@@ -32,7 +32,7 @@ function BasicExample() {
       </Card.Body>
     </Card>
     </div>
-    <div className="col">
+      <div className="col-sm-12 g-2">
     <Card className='shadow'>
       <Card.Img variant="top" src={Me} />
       <Card.Body>
@@ -45,7 +45,7 @@ function BasicExample() {
       </Card.Body>
     </Card>
     </div>
-    <div className="col">
+      <div className="col-sm-12 g-2">
     <Card className='shadow'>
       <Card.Img variant="top" src={Me} />
       <Card.Body>

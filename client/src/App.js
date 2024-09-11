@@ -16,6 +16,7 @@ import WebPricing from "./pages/WebPricing.jsx";
 import MultiDropNav from "./components/Navgation/MultiDropNav.jsx";
 import HomeLayout from "./components/Layout/MainLayout.jsx";
 
+import TestPage from "./pages/TestPage.jsx";  
 import GraphicsPage from "./pages/services/GraphicsPage.jsx";
 import WebDevPage from "./pages/services/WebDevPage.jsx";
 import DigitalMarketingPage from "./pages/services/DigitalMarketingPage.jsx";
@@ -54,6 +55,7 @@ function App() {
               <Route path="/login" element={<LoginPage />} />
               <Route path="/register" element={<RegisterPage />} />
               <Route path="/contact" element={<ContactPage />} />
+              <Route path="/test" element={<TestPage />} />
 
               <Route path="/graphics" element={<GraphicsPage />} />
               <Route path="/web-dev" element={<WebDevPage />} />

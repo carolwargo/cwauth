@@ -12,7 +12,7 @@ function BlackHeader() {
           backgroundImage: `url(${FullBlackHeader})`, 
           backgroundSize: 'cover', 
           backgroundRepeat: 'no-repeat',
-          height: '450px', // Adjust height as needed
+          height: 'auto', // Adjust height as needed
           width: '100%' // Ensure it takes up the full width
         }}
       >
