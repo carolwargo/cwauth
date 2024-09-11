@@ -21,27 +21,7 @@ const DMFlipCard = () => {
         <div>
           <style>
             {`
-                    .flip-card-services {
-                        padding: 50px 20px;
-                        background-color: #f7f7f7 !important; /* Add !important to override other styles */
-                        text-align: center;
-                    }  
-                    
-                    .col {
-                        font-family: Arial, Helvetica, sans-serif;
-                        padding: 0; /* Remove padding */
-                        margin: 5px; /* Small margin to separate the cards slightly */
-                    }
-    
-                    .flip-card {
-                        background-color: transparent;
-                        width: 250px;
-                        height: 250px;
-                        perspective: 1000px;
-                        margin: 0 auto;
-                    }
-    
-                    .flip-card-inner {
+             .flip-card-inner {
                         position: relative;
                         width: 100%;
                         height: 100%;
@@ -74,13 +54,23 @@ const DMFlipCard = () => {
                     }
                 `}
           </style>
-              <div className="row">
+
+          
+              <div className="row justify-content-center align-items-center">
                 {flippedCards.map((isFlipped, index) => (
                   <div
                     className="col-sm-12 col-md-3 col-lg-3 justify-content-center align-items-center"
                     key={index}
                   >
-                    <div className="flip-card" onClick={() => handleFlip(index)}>
+                    <div className="flip-card" 
+                    onClick={() => handleFlip(index)}
+                    style={{
+                      backgroundColor: 'transparent',
+                      width: '250px',
+                      height: '250px',
+                      perspective: '1000px',
+                      margin: '0 auto'
+                    }}>
                       <div
                         className="flip-card-inner shadow rounded"
                         style={{

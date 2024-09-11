@@ -18,24 +18,7 @@ const DigitalMarketingLandingPage = () => {
             <section className="services">
             <h2>Our Services</h2>
                 <DMFlipCard/>
-                <div className="service-cards">
-                    <div className="service-card">
-                        <h3>SEO Optimization</h3>
-                        <p>Increase your visibility on search engines and drive organic traffic.</p>
-                    </div>
-                    <div className="service-card">
-                        <h3>Content Creation</h3>
-                        <p>Engage your audience with high-quality content tailored to your brand.</p>
-                    </div>
-                    <div className="service-card">
-                        <h3>Social Media Management</h3>
-                        <p>Grow your brand’s presence on social media with our expert management.</p>
-                    </div>
-                    <div className="service-card">
-                        <h3>Pay-Per-Click Advertising</h3>
-                        <p>Drive targeted traffic and maximize ROI with PPC campaigns.</p>
-                    </div>
-                </div>
+           
             </section>
 
             {/* Testimonials Section */}
@@ -65,3 +48,27 @@ const DigitalMarketingLandingPage = () => {
 
 export default DigitalMarketingLandingPage;
 
+/** 
+ *  Services Section WITHOUT DMFlipCard
+<section className="services">
+<h2>Our Services</h2>
+    <div className="service-cards">
+        <div className="service-card">
+            <h3>SEO Optimization</h3>
+            <p>Increase your visibility on search engines and drive organic traffic.</p>
+        </div>
+        <div className="service-card">
+            <h3>Content Creation</h3>
+            <p>Engage your audience with high-quality content tailored to your brand.</p>
+        </div>
+        <div className="service-card">
+            <h3>Social Media Management</h3>
+            <p>Grow your brand’s presence on social media with our expert management.</p>
+        </div>
+        <div className="service-card">
+            <h3>Pay-Per-Click Advertising</h3>
+            <p>Drive targeted traffic and maximize ROI with PPC campaigns.</p>
+        </div>
+    </div>
+</section>
+*/
