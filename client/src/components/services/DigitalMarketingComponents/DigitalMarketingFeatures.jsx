@@ -1,8 +1,6 @@
 import React from "react";
-import MarketingMetrics from "../../../assets/images/MarketingMetrics.png";
+//import MarketingMetrics from "../../../assets/images/MarketingMetrics.png";
 import Schedule from "../../../assets/images/Schedule.png";
-import Button from 'react-bootstrap/Button';
-import Card from 'react-bootstrap/Card';
 import './digital-marketing.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -83,15 +81,57 @@ const DigitalMarketingFeatures = () => {
 
 <main>
 
+
+<section class="services">
+        <div class="service">
+            <h2>Conversion Rate Optimization (CRO)</h2>
+            <p>Improve your website's user experience to convert more visitors into customers. We use A/B testing, heat maps, and user feedback to optimize performance.</p>
+        </div>
+
+        <div class="service">
+            <h2>Influencer Marketing</h2>
+            <p>Leverage influencers in your industry to reach a broader audience and build trust. We connect you with relevant influencers for authentic campaigns.</p>
+        </div>
+
+        <div class="service">
+            <h2>Marketing Automation</h2>
+            <p>Automate repetitive marketing tasks and nurture leads. Our services include CRM integration and personalized email campaigns to boost efficiency.</p>
+        </div>
+
+        <div class="service">
+            <h2>Reputation Management</h2>
+            <p>Maintain and enhance your brand's online image. We monitor reviews, handle public relations, and implement strategies to build trust and credibility.</p>
+        </div>
+
+        <div class="service">
+            <h2>Affiliate Marketing</h2>
+            <p>Expand your reach through affiliate programs. We recruit partners, manage programs, and track performance to boost your sales and visibility.</p>
+        </div>
+
+        <div class="service">
+            <h2>Video Marketing</h2>
+            <p>Engage your audience with compelling video content. From production to promotion, we help you create videos that captivate and convert.</p>
+        </div>
+
+        <div class="service">
+            <h2>Mobile Marketing</h2>
+            <p>Reach your audience on mobile devices. We design mobile-friendly campaigns, optimize apps, and use SMS marketing to engage users on the go.</p>
+        </div>
+
+        <div class="service">
+            <h2>Local SEO</h2>
+            <p>Attract local customers with optimized local SEO strategies. We improve your Google My Business profile, manage citations, and boost local search rankings.</p>
+        </div>
+    </section>
+
   {/* Start Digital Marketing Types */}
 
        <div className="w3-container px-5 py-5"
          style={{ 
           backgroundImage: 'linear-gradient(to left bottom, #fbedef, #fbedef, white, white, #fbedef, white, #fdccd4)'}}
           >
- <h2 className="pb-2 border-bottom">Columns with Icons</h2>
-     
-   <div className="row">
+
+   <div className="row justify-content-center align-items-center">
       <div className="col-lg-7 w3-padding-large">
     <h5 className=" text-capitalize">In today’s fast-paced digital landscape, standing out requires a tailored, multi-faceted marketing approach.</h5>
     <h1 className="fw-bold">Digital Marketing Expertise</h1>
@@ -109,22 +149,17 @@ const DigitalMarketingFeatures = () => {
       </div>
       <div className="col-lg-5"
         style={{padding:'24px'}}>
-      <Card style={{ width: '100%' }} className="shadow">
-      <Card.Img variant="top" src={Schedule} alt="Marketing" 
+      <img  src={Schedule} alt="Marketing" 
       className="w3-padding-large  img-fluid" />
-      <Card.Body   className="w3-padding-large w3-margin-bottom" >
-        <Card.Title>Card Title</Card.Title>
-        <Card.Text>
-          Some quick example text to build on the card title and make up the
-          bulk of the card's content.
-        </Card.Text>
-        <Button variant="primary">Go somewhere</Button>
-      </Card.Body>
-    </Card>
+
         </div>
    </div>
+   <div className="text-center py-5">
+  <h1 className="header-title">Unlock Digital Growth with Targeted Strategies</h1>
+  <p className="header-tagline">From conversions to reputation, we help your brand thrive.</p>
+</div>
 
-   <div className="row g-4 py-5 row-cols-1 row-cols-sm-2 row-cols-lg-4 ">
+   <div className="row g-4 mt-2 row-cols-1 row-cols-sm-2 row-cols-lg-4 ">
      <div className="col d-flex align-items-start">
        <svg className="bi text-body-secondary flex-shrink-0 me-3" width="1.5em" height="1.5em"><use xlinkHref="#bootstrap"/></svg>
        <div>
@@ -189,132 +224,6 @@ const DigitalMarketingFeatures = () => {
 
 
 
-
-    {/* Start Brands */}
-    <div className="w3-container px-5 py-5">
-    <div className="py-5" id="featured-3">
-      <h2 className="pb-2 border-bottom">Columns with Icons</h2>
-      <div className="row g-4 py-5 row-cols-1 row-cols-lg-3">
-        <div className="feature col">
-          <div className="feature-icon d-inline-flex align-items-center justify-content-center w3-pink bg-gradient fs-2 mb-3">
-            <svg className="bi" width="1em" height="1em"><use xlinkHref="#collection"/></svg>
-          </div>
-          <h4 className="text-body-emphasis">SEO Optimization</h4>
-          <p style={{fontSize:'14px'}}>Enhance your website's visibility on search engines through comprehensive keyword research, on-page and off-page optimization, and technical SEO improvements.</p>
-          <a href="/" className="icon-link">
-            Learn More
-            <svg className="bi"><use xlinkHref="#chevron-right"/></svg>
-          </a>
-        </div>
-        <div className="feature col">
-          <div className="feature-icon d-inline-flex align-items-center justify-content-center w3-pink bg-gradient fs-2 mb-3">
-            <svg className="bi" width="1em" height="1em"><use xlinkHref="#people-circle"/></svg>
-          </div>
-          <h4 className="text-body-emphasis">Social Media Marketing</h4>
-          <p style={{fontSize:'14px'}}>Boost your brand's presence on social media platforms with tailored content strategies, community engagement, and data-driven ad campaigns to reach your target audience effectively.</p>
-          <a href="/" className="icon-link">
-            Learn More
-            <svg className="bi"><use xlinkHref="#chevron-right"/></svg>
-          </a>
-        </div>
-        <div className="feature col">
-          <div className="feature-icon d-inline-flex align-items-center justify-content-center w3-pink bg-gradient fs-2 mb-3">
-            <svg className="bi" width="1em" height="1em"><use xlinkHref="#toggles2"/></svg>
-          </div>
-          <h4 className="text-body-emphasis">Content Marketing</h4>
-          <p style={{fontSize:'14px'}}>Create compelling and valuable content that attracts, engages, and retains your audience. Our content marketing services include blog writing, video production, and infographic design.</p>
-          <a href="/" className="icon-link">
-            Learn More
-            <svg className="bi"><use xlinkHref="#chevron-right"/></svg>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-  {/* End Brands */}
-  
-   <div className="w3-container px-5 w3-black w3-padding-32 w3-margin-bottom">
-   <h1 className="fw-bold text-body-white text-center">Brands our remote teams helped build:</h1>
-   </div>
-
-
-
-
-
-
-<div className="w3-container px-5 py-5">
-<div className="digital-marketing-options">
- {/* Start 3 Columns with Icons */}
-    <div className="py-5" id="featured-3">
-      <h1>Contact us to discuss the approach that works for you.</h1>
-    <h4>
-    Achieve unmatched results by combining remote expertise with the strengths of your internal team.
-  </h4>
-      <h2 className="pb-2 border-bottom">Choose the Right Digital Marketing Approach for Your Business</h2>
-     <button>contact us</button>
-    </div>
-  </div>
-</div>
-
-
-    
-    <div className="w3-container px-5 py-3">
-   
-  <div className="row row-cols-1 row-cols-md-2 align-items-md-center g-5">
-      <div className="col-sm-12 col-md-6 col-lg-6 d-flex flex-column align-items-start gap-2">
-<h2>Our Approach to Digital Marketing Excellence.</h2>
-
-<p>We believe in delivering tailored digital marketing strategies that drive success. Our comprehensive approach ensures that every campaign is backed by data, customized to your needs, and executed by a team of experts. Discover how our proven methods can help you achieve your marketing goals and propel your business forward.</p>
-   <a href="/" className="btn w3-pink btn-lg">Get Started</a>
-      </div>
-      <div className="col-sm-12 col-md-6 col-lg-6">
-        <img src={MarketingMetrics} alt="digital marketing" className="shadow w-100"/>
-      </div>
-    </div>
-    </div>
-    
-    <div className="w3-container px-5 py-3">
-   
-  <div className="row row-cols-1 row-cols-md-2 align-items-md-center g-5">
-      <div className="col-sm-12 col-md-12 col-lg-12 d-flex flex-column align-items-start gap-2">
-        <div className="row row-cols-1 row-cols-sm-4 g-4">
-          <div className="col d-flex flex-column gap-2">
-            <div className="feature-icon-small d-inline-flex align-items-center justify-content-center w3-pink bg-gradient fs-4 rounded-3">
-              <svg className="bi" width="1em" height="1em"><use xlinkHref="#collection" /></svg>
-            </div>
-            <h4 className="fw-semibold mb-0 text-body-emphasis" >Data-Driven Strategies</h4>
-            <p className="text-body-secondary" style={{fontSize:'13px'}}>We use data and analytics to inform our strategies, ensuring that every campaign is optimized for success.</p>
-          </div>
-          <div className="col d-flex flex-column gap-2">
-            <div className="feature-icon-small d-inline-flex align-items-center justify-content-center w3-pink bg-gradient fs-4 rounded-3">
-              <svg className="bi" width="1em" height="1em"><use xlinkHref="#gear-fill" /></svg>
-            </div>
-            <h4 className="fw-semibold mb-0 text-body-emphasis">Custom Solutions</h4>
-            <p className="text-body-secondary" style={{fontSize:'13px'}}>We tailor our services to meet your unique needs, providing customized solutions that align with your business objectives.</p>
-          </div>
-          <div className="col d-flex flex-column gap-2">
-            <div className="feature-icon-small d-inline-flex align-items-center justify-content-center w3-pink bg-gradient fs-4 rounded-3">
-              <svg className="bi" width="1em" height="1em"><use xlinkHref="#speedometer" /></svg>
-            </div>
-            <h4 className="fw-semibold mb-0 text-body-emphasis">Proven Results</h4>
-            <p className="text-body-secondary" style={{fontSize:'13px'}}>Our track record of success speaks for itself. We have helped numerous clients achieve their marketing goals and grow their businesses.</p>
-          </div>
-          <div className="col d-flex flex-column gap-2">
-            <div className="feature-icon-small d-inline-flex align-items-center justify-content-center w3-pink bg-gradient fs-4 rounded-3">
-              <svg className="bi" width="1em" height="1em"><use xlinkHref="#table" /></svg>
-            </div>
-            <h4 className="fw-semibold mb-0 text-body-emphasis">Expert Team</h4>
-            <p className="text-body-secondary" style={{fontSize:'13px'}}>Our team of digital marketing experts has the knowledge and experience to drive your business forward.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    </div>
-
-
-
-
-  {/* End 3 Column Left Align */}
 </main>
 
     </div>
@@ -411,3 +320,91 @@ By partnering with us, you maintain full control over your digital marketing str
   </div>
   </div>
   </div> */
+
+
+  
+    /* Start Brands */
+    /**
+    <div className="w3-container px-5 py-5">
+    <div className="py-5" id="featured-3">
+      <h2 className="pb-2 border-bottom">Columns with Icons</h2>
+      <div className="row g-4 py-5 row-cols-1 row-cols-lg-3">
+        <div className="feature col">
+          <div className="feature-icon d-inline-flex align-items-center justify-content-center w3-pink bg-gradient fs-2 mb-3">
+            <svg className="bi" width="1em" height="1em"><use xlinkHref="#collection"/></svg>
+          </div>
+          <h4 className="text-body-emphasis">SEO Optimization</h4>
+          <p style={{fontSize:'14px'}}>Enhance your website's visibility on search engines through comprehensive keyword research, on-page and off-page optimization, and technical SEO improvements.</p>
+          <a href="/" className="icon-link">
+            Learn More
+            <svg className="bi"><use xlinkHref="#chevron-right"/></svg>
+          </a>
+        </div>
+        <div className="feature col">
+          <div className="feature-icon d-inline-flex align-items-center justify-content-center w3-pink bg-gradient fs-2 mb-3">
+            <svg className="bi" width="1em" height="1em"><use xlinkHref="#people-circle"/></svg>
+          </div>
+          <h4 className="text-body-emphasis">Social Media Marketing</h4>
+          <p style={{fontSize:'14px'}}>Boost your brand's presence on social media platforms with tailored content strategies, community engagement, and data-driven ad campaigns to reach your target audience effectively.</p>
+          <a href="/" className="icon-link">
+            Learn More
+            <svg className="bi"><use xlinkHref="#chevron-right"/></svg>
+          </a>
+        </div>
+        <div className="feature col">
+          <div className="feature-icon d-inline-flex align-items-center justify-content-center w3-pink bg-gradient fs-2 mb-3">
+            <svg className="bi" width="1em" height="1em"><use xlinkHref="#toggles2"/></svg>
+          </div>
+          <h4 className="text-body-emphasis">Content Marketing</h4>
+          <p style={{fontSize:'14px'}}>Create compelling and valuable content that attracts, engages, and retains your audience. Our content marketing services include blog writing, video production, and infographic design.</p>
+          <a href="/" className="icon-link">
+            Learn More
+            <svg className="bi"><use xlinkHref="#chevron-right"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  */
+  /* End Brands */
+
+
+  /** 
+   * 
+<div className="w3-container px-5 py-5">
+<div className="digital-marketing-options">
+
+
+
+
+ /* Start 3 Columns with Icons */
+/**
+    <div className="py-5" id="featured-3">
+    <h1>Contact us to discuss the approach that works for you.</h1>
+  <h4>
+  Achieve unmatched results by combining remote expertise with the strengths of your internal team.
+</h4>
+    <h2 className="pb-2 border-bottom">Choose the Right Digital Marketing Approach for Your Business</h2>
+   <button>contact us</button>
+  </div>
+</div>
+</div>
+  */
+
+/**
+ *  
+    <div className="w3-container px-5 py-3">
+   
+  <div className="row row-cols-1 row-cols-md-2 align-items-md-center g-5">
+      <div className="col-sm-12 col-md-6 col-lg-6 d-flex flex-column align-items-start gap-2">
+<h2>Our Approach to Digital Marketing Excellence.</h2>
+
+<p>We believe in delivering tailored digital marketing strategies that drive success. Our comprehensive approach ensures that every campaign is backed by data, customized to your needs, and executed by a team of experts. Discover how our proven methods can help you achieve your marketing goals and propel your business forward.</p>
+   <a href="/" className="btn w3-pink btn-lg">Get Started</a>
+      </div>
+      <div className="col-sm-12 col-md-6 col-lg-6">
+        <img src={MarketingMetrics} alt="digital marketing" className="shadow w-100"/>
+      </div>
+    </div>
+    </div>
+ */

@@ -8,7 +8,7 @@ const HomePage = () => {
   return (
     <div>
  <BrandBar/>
-   <div className="container">
+   <div className="w3-container" style={{padding:'40px 60px'}}>
     <div className="row w3-row-padding">
       <div className="col-sm-12 col-md-6 col-lg-6">
      <p>With a proven track record in corporate strategy, digital marketing, web and software development, and a keen eye for design principles and business analysis, I’m dedicated to helping you plan, build, and grow — taking your personal or professional ventures to the next level of success.
@@ -29,13 +29,13 @@ Let's connect and start this journey together, taking your ideas from concept to
    </div>
 
 
-<div className="container">
+   <div className="w3-container" style={{padding:'40px 60px'}}>
   <h1>Business Services</h1>
   <h4>My services are designed to help you achieve your business goals faster. Whether you’re looking to launch a new business, boost your online presence, drive traffic, or scale your current achievements, I’m here to provide the expertise and guidance you need. </h4>
   <h4><b>How we can help.</b></h4>
 <ServiceCards />  
 </div>
-<div className="container text-center">
+<div className="w3-container text-center" style={{padding:'40px 60px'}}>
           <h1>Book a discovery call</h1>
           <p> Let’s talk about your website development and digital marketing
             needs so I can help you reach your business goals faster. Once you
@@ -47,7 +47,7 @@ Let's connect and start this journey together, taking your ideas from concept to
 
 
       
-      <div className="container text-center">
+      <div className="w3-container text-center" style={{padding:'40px 60px'}}>
           <h1>As a Small Business Owner, You Have A Lot To think about!</h1>
           <h4>I’m here to help guide you through tried and tested digital strategies so you can reach your goals & get back to what you love doing. </h4>
           <h4>Book a 30-minute discovery call below…</h4>

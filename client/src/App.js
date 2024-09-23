@@ -17,6 +17,7 @@ import MultiDropNav from "./components/Navgation/MultiDropNav.jsx";
 import HomeLayout from "./components/Layout/MainLayout.jsx";
 
 import TestPage from "./pages/TestPage.jsx";  
+import AnalyticsInsights from "./pages/services/AnalyticsInsights.jsx";
 import GraphicsPage from "./pages/services/GraphicsPage.jsx";
 import WebDevPage from "./pages/services/WebDevPage.jsx";
 import DigitalMarketingPage from "./pages/services/DigitalMarketingPage.jsx";
@@ -47,6 +48,8 @@ function App() {
                 <Route index element={<DigitalMarketingPage />} />
               </Route>
               
+          
+
               <Route path="/pricing" element={<PricingLayout />}>
                 <Route index element={<WebPricing />} />
               </Route>
@@ -57,6 +60,8 @@ function App() {
               <Route path="/contact" element={<ContactPage />} />
               <Route path="/test" element={<TestPage />} />
 
+              
+              <Route path="/analytics-insights" element={<AnalyticsInsights />} />
               <Route path="/graphics" element={<GraphicsPage />} />
               <Route path="/web-dev" element={<WebDevPage />} />
               <Route path="/digital-marketing" element={<DigitalMarketingPage />} />

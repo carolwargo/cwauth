@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 function BlackHeader() {
   return (
-    <>
+    <div>
       <div 
       className='w3-black'
         style={{ 
@@ -16,7 +16,8 @@ function BlackHeader() {
           width: '100%' // Ensure it takes up the full width
         }}
       >
-    <div className="row w3-padding-large d-flex justify-content-center align-items-center"
+         <div className="w3-container" style={{padding:'40px 60px'}}>
+    <div className="row d-flex justify-content-center align-items-center"
 style={{ minHeight: '80vh' }}>
   <div className="col-sm-12 col-md-8 col-lg-8">
     <h1 className='mb-4' style={{fontSize:'3.35rem'}}>Digital Solutions & Creative Design Services</h1>
@@ -34,8 +35,8 @@ style={{ minHeight: '80vh' }}>
   </div>
 </div>
 </div>
-
-    </>
+</div>
+    </div>
   );
 }
 
