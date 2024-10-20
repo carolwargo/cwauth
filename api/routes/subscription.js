@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const Subscription = require('../models/Subscription');
+const Subscription = require('../models/Subscribe');
 const User = require('../models/User');
 
 // Route to handle subscription

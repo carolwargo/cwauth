@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import UsersContainer from "../components/admin/UsersContainer";
 import SubscribersContainer from "../components/admin/SubscribersContainer";
-import ContactsContainer from "../components/admin/ContactsContainer";
+
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Sidebar, Menu, MenuItem, SubMenu } from "react-pro-sidebar";
 import axios from 'axios';
@@ -78,9 +78,6 @@ const AdminPage = () => {
                 <MenuItem onClick={() => handleRenderComponent("contacts")}>
                   Contacts {notifications.contacts > 0 && `(${notifications.contacts})`}
                 </MenuItem>
-                <MenuItem onClick={() => handleRenderComponent("addContact")}>
-                  Add Contact
-                </MenuItem>
               </SubMenu>
             </Menu>
           </Sidebar>
@@ -90,7 +87,6 @@ const AdminPage = () => {
           <div className="card" style={{ padding: "10px", fontSize: '12px' }}>
             {activeComponent === "users" && <UsersContainer />}
             {activeComponent === "subscribers" && <SubscribersContainer />}
-            {activeComponent === "contacts" && <ContactsContainer />}
          </div>
         </div>
       </div>

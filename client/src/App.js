@@ -5,7 +5,7 @@ import { UserContextProvider } from "./UserContext";
 import Calendly from './pages/Calendly.jsx';
 import AdminPage from "./pages/AdminPage";
 import LoginPage from "./pages/LoginPage";
-import RegisterPage from "./pages/RegisterPage";
+import RegisterPage from "./pages/RegisterPage.jsx";
 import ErrorBoundary from "./ErrorBoundary";
 import HomePage from "./pages/HomePage";
 import ContactPage from "./pages/ContactPage";
@@ -57,7 +57,6 @@ function App() {
               <Route path="/web-pricing" element={<WebPricing />} />
               <Route path="/register" element={<RegisterPage />} />
               <Route path="/login" element={<LoginPage />} />
-              <Route path="/register" element={<RegisterPage />} />
               <Route path="/contact" element={<ContactPage />} />
               <Route path="/test" element={<TestPage />} />
 
