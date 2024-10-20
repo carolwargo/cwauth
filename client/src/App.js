@@ -25,6 +25,7 @@ import ITPage from "./pages/services/ITPage.jsx";
 import SEOAnalyticsPage from "./pages/services/SEOAnalyticsPage.jsx";
 import ContentCreationPage from "./pages/services/ContentCreationPage.jsx";
 
+
 import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
@@ -59,6 +60,7 @@ function App() {
               <Route path="/register" element={<RegisterPage />} />
               <Route path="/contact" element={<ContactPage />} />
               <Route path="/test" element={<TestPage />} />
+
 
               
               <Route path="/analytics-insights" element={<AnalyticsInsights />} />

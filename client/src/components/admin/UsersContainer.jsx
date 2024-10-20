@@ -37,18 +37,20 @@ function UserContainer() {
 
   // Render the table only when data is loaded successfully
   return (
+  <div style={{fontFamily:'Raleway'}}>
     <div className='user-dashboard-container'>
-      <h2>User List</h2>
+
+      <h2>USERS LIST</h2>
       <table className='table table-striped table-bordered'>
-        <thead style={{ fontSize: '12px' }}>
-          <tr>
-            <th style={{ fontSize: '12px' }}>USERNAME</th>
-            <th style={{ fontSize: '12px' }}>FIRST</th>
-            <th style={{ fontSize: '12px' }}>LAST</th>
-            <th style={{ fontSize: '12px' }}>PHONE</th>
-            <th style={{ fontSize: '12px' }}>EMAIL</th>
-          </tr>
-        </thead>
+      <thead>
+    <tr>
+      <th style={{ width: '10%', fontSize: '14px' }}>USERNAME</th>
+      <th style={{ width: '40px', fontSize: '14px' }}>FIRST</th>
+      <th style={{ width: '40px', fontSize: '14px' }}>LAST</th>
+      <th style={{ width: '50px', fontSize: '14px' }}>PHONE</th>
+      <th style={{ width: '60px', fontSize: '14px' }}>EMAIL</th>
+    </tr>
+  </thead>
         <tbody className='mt-3'>
           {users.map(user => (
             <tr key={user._id}>
@@ -61,6 +63,7 @@ function UserContainer() {
           ))}
         </tbody>
       </table>
+    </div>
     </div>
   );
 }

@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from "react";
 import UsersContainer from "../components/admin/UsersContainer";
 import SubscribersContainer from "../components/admin/SubscribersContainer";
-//import SignUpsContainer from "../components/admin/SignUpsContainer";
 import ContactsContainer from "../components/admin/ContactsContainer";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Sidebar, Menu, MenuItem, SubMenu } from "react-pro-sidebar";
-import axios from 'axios'; // For making API requests
+import axios from 'axios';
 
 const AdminPage = () => {
   const [activeComponent, setActiveComponent] = useState("users");
@@ -21,7 +20,7 @@ const AdminPage = () => {
         const [subscribersRes, signupsRes, contactsRes] = await Promise.all([
           axios.get('/api/subscription/count'),
           axios.get('/api/signups/count'),
-          axios.get('/api/contact/count')
+          axios.get('/api/contacts/count')
         ]);
 
         setNotifications({
@@ -35,30 +34,25 @@ const AdminPage = () => {
     };
 
     fetchNotifications();
-  }, [activeComponent]); // Re-fetch notifications when component changes
+  }, [activeComponent]);
 
   const handleRenderComponent = (component) => {
     setActiveComponent(component);
   };
 
+
   return (
     <div className="admin-dashboard">
       <div className="admin-header w3-black">
         <div className="admin-header-text px-3 py-2 align-items-center">
-          <h1
-            style={{
-              display: "flex",
-              justifyContent: "space-between",
-              alignItems: "center",
-            }}
-          >
+          <h1 style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
             Admin Dashboard
           </h1>
           <p>Welcome to the Admin Dashboard</p>
         </div>
       </div>
 
-      <div className="row d-flex justify-content-center align-items-start px-4 mt-3 mb-3">
+      <div className="row d-flex justify-content-center align-items-start px-2 mt-3 mb-3">
         <div className="col-sm-12 col-md-3 col-lg-3">
           <p>Choose dashboard item to display</p>
           <hr />
@@ -75,21 +69,17 @@ const AdminPage = () => {
               }}
             >
               <SubMenu label="Users">
-              <MenuItem
-                  onClick={() => handleRenderComponent("users")}
-                >
+                <MenuItem onClick={() => handleRenderComponent("users")}>
                   All Users {notifications.users > 0 && `(${notifications.users})`}
                 </MenuItem>
-                <MenuItem
-                  onClick={() => handleRenderComponent("subscribers")}
-                >
+                <MenuItem onClick={() => handleRenderComponent("subscribers")}>
                   Subscribers {notifications.subscribers > 0 && `(${notifications.subscribers})`}
                 </MenuItem>
-            
-                <MenuItem
-                  onClick={() => handleRenderComponent("contacts")}
-                >
+                <MenuItem onClick={() => handleRenderComponent("contacts")}>
                   Contacts {notifications.contacts > 0 && `(${notifications.contacts})`}
+                </MenuItem>
+                <MenuItem onClick={() => handleRenderComponent("addContact")}>
+                  Add Contact
                 </MenuItem>
               </SubMenu>
             </Menu>
@@ -97,11 +87,11 @@ const AdminPage = () => {
         </div>
 
         <div className="col-sm-12 col-md-9 col-lg-9">
-          <div className="card" style={{ padding: "20px", fontSize:'12px' }}>
+          <div className="card" style={{ padding: "10px", fontSize: '12px' }}>
             {activeComponent === "users" && <UsersContainer />}
             {activeComponent === "subscribers" && <SubscribersContainer />}
             {activeComponent === "contacts" && <ContactsContainer />}
-          </div>
+         </div>
         </div>
       </div>
     </div>

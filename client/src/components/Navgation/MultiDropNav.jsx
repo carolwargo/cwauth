@@ -163,7 +163,7 @@ const CustomNavbar = () => {
         className="w3-hover-green w3-text-blue w3-pale-blue border border-1 rounded rounded-circle p-1 shadow"
         style={{ fontSize: '1.75rem'}} />
 </Nav.Link>
-            <Nav.Link as={Link} to="/login" className="mx-0 px-1">
+            <Nav.Link as={Link} to="/contact" className="mx-0 px-1">
     <RiLoginCircleLine
         className="w3-hover-blue w3-text-green border w3-pale-green border-1 rounded rounded-circle p-1 shadow"
         style={{ fontSize: '1.75rem'}} />

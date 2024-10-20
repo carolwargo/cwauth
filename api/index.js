@@ -18,7 +18,7 @@ app.use(cookieParser());
 const authRoutes = require('./routes/auth');
 const userRoutes = require('./routes/users');
 const subscriptionRoutes = require('./routes/subscription');
-const contactRoutes = require('./routes/contacts');
+const contactRoutes = require('./routes/contact');
 
 app.use('/api/auth', authRoutes);
 app.use('/api', userRoutes);
@@ -35,6 +35,9 @@ app.use((err, req, res, next) => {
   console.error(err.stack);
   res.status(500).json({ error: 'Internal Server Error' });
 });
+
+
+
 
 // Start the server with error handling
 const PORT = process.env.PORT || 4000;
